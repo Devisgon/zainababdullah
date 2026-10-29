@@ -1,0 +1,33 @@
+{
+  "name": "Zainab Abdullah",
+  "siteUrl": "https://zainab-abdullah-growth.asm-ceo.chatgpt.site",
+  "linkedInUrl": "https://www.linkedin.com/in/zainab-abdullah-118100207/",
+  "description": "Grow your business with Zainab Abdullah: Meta ads, TikTok ads, Google Ads and content marketing, supported by a psychology background and business analysis experience.",
+  "jobTitle": "Digital Marketing Expert & Business Analyst",
+  "bio": "Digital marketing professional since July 2026, with a psychology background and more than two years of business analysis experience.",
+  "navigation": [
+    ["Services", "/services"],
+    ["My work", "/work"],
+    ["About", "/about"],
+    ["Reviews", "/reviews"],
+    ["Blog", "/blog"]
+  ],
+  "socialProfiles": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/zainab-abdullah-118100207/"
+    },
+    {
+      "name": "Facebook",
+      "url": null
+    },
+    {
+      "name": "Instagram",
+      "url": null
+    },
+    {
+      "name": "X",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "eyebrow": "INDEPENDENT MIND. GLOBAL REACH.",
+    "headline": ["Less guesswork.", "More", "good", "growth."],
+    "subheadline": [
+      "Paid ads that understand people.",
+      "Strategy that understands your business."
+    ],
+    "description": "I’m Zainab. I help businesses connect with the right people through Meta, TikTok and Google ads—with a human perspective behind every campaign.",
+    "primaryCta": "Find your growth plan",
+    "secondaryCta": "Explore services",
+    "footnote": "Psychology-informed. Business-minded. Built around you."
+  },
+  "process": [
+    [
+      "01",
+      "First, understand.",
+      "Your business, your customer, your offer. We start with the right questions before making channel decisions.",
+      "DISCOVER"
+    ],
+    [
+      "02",
+      "Build with intent.",
+      "Turn those answers into a practical campaign plan: audiences, message, creative direction and a clear next step.",
+      "PLAN"
+    ],
+    [
+      "03",
+      "Test what matters.",
+      "Launch with agreed goals and measurement. Compare meaningful variations and give each test a purpose.",
+      "ACTIVATE"
+    ],
+    [
+      "04",
+      "Learn. Then refine.",
+      "Review what the data tells us, make informed changes and keep you in the loop with clear reporting.",
+      "IMPROVE"
+    ]
+  ],
+  "about": {
+    "paragraphs": [
+      "I’m Zainab Abdullah—a digital marketer, psychologist and business analyst. I bring curiosity about people and clarity about processes to the way I approach growth.",
+      "I’ve worked with clients around the world through Upwork, Fiverr, Instagram and LinkedIn. My digital marketing work began in July 2026, alongside more than two years of experience in business analysis."
+    ],
+    "points": [
+      {
+        "title": "A psychology perspective",
+        "description": "Understand motivations, questions and the person behind the click."
+      },
+      {
+        "title": "A business analyst’s clarity",
+        "description": "Connect the campaign with the customer journey and what happens next."
+      },
+      {
+        "title": "Comfortable working globally",
+        "description": "Remote collaboration with businesses across markets and time zones."
+      }
+    ]
+  },
+  "analysis": {
+    "tags": [
+      "UML diagrams",
+      "BPMN",
+      "Swimlanes",
+      "Process mapping",
+      "Architecture diagrams",
+      "Technical documentation"
+    ]
+  }
+}

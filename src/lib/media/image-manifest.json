@@ -1,0 +1,119 @@
+{
+  "/assets/sample-female-portrait.webp": {
+    "width": 1122,
+    "height": 1402,
+    "variants": [
+      {
+        "width": 64,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.64.webp",
+        "bytes": 908
+      },
+      {
+        "width": 96,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.96.webp",
+        "bytes": 1522
+      },
+      {
+        "width": 128,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.128.webp",
+        "bytes": 2142
+      },
+      {
+        "width": 256,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.256.webp",
+        "bytes": 5168
+      },
+      {
+        "width": 320,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.320.webp",
+        "bytes": 6844
+      },
+      {
+        "width": 480,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.480.webp",
+        "bytes": 12122
+      },
+      {
+        "width": 640,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.640.webp",
+        "bytes": 17696
+      },
+      {
+        "width": 768,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.768.webp",
+        "bytes": 23534
+      },
+      {
+        "width": 960,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.960.webp",
+        "bytes": 31146
+      },
+      {
+        "width": 1122,
+        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.1122.webp",
+        "bytes": 46366
+      }
+    ]
+  },
+  "/assets/sample-female-office.webp": {
+    "width": 1440,
+    "height": 960,
+    "variants": [
+      {
+        "width": 64,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.64.webp",
+        "bytes": 1042
+      },
+      {
+        "width": 96,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.96.webp",
+        "bytes": 1886
+      },
+      {
+        "width": 128,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.128.webp",
+        "bytes": 2790
+      },
+      {
+        "width": 256,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.256.webp",
+        "bytes": 7096
+      },
+      {
+        "width": 320,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.320.webp",
+        "bytes": 9248
+      },
+      {
+        "width": 480,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.480.webp",
+        "bytes": 15144
+      },
+      {
+        "width": 640,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.640.webp",
+        "bytes": 21224
+      },
+      {
+        "width": 768,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.768.webp",
+        "bytes": 26460
+      },
+      {
+        "width": 960,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.960.webp",
+        "bytes": 33970
+      },
+      {
+        "width": 1122,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.1122.webp",
+        "bytes": 39594
+      },
+      {
+        "width": 1440,
+        "src": "/assets/optimized/sample-female-office.f2499c6a521e.1440.webp",
+        "bytes": 58680
+      }
+    ]
+  }
+}

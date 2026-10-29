@@ -1,0 +1,60 @@
+{
+  "name": "zainab-abdullah-growth",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "install:ci": "bash scripts/install-pnpm.sh",
+    "dev": "node scripts/run-framework.mjs dev",
+    "build": "node scripts/build.mjs",
+    "start": "next start",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "db:generate": "drizzle-kit generate",
+    "dev:next": "next dev",
+    "build:next": "next build --webpack",
+    "check": "node --import tsx --test tests/*.test.ts",
+    "format": "prettier --write src tests next.config.ts vite.config.ts docs README.md",
+    "typecheck": "next typegen && tsc --noEmit",
+    "validate:content": "node --import tsx scripts/validate-content.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "^1.31.0",
+    "next": "16.3.4",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "4.20260515.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.3.4",
+    "json-rpc-2.0": "1.7.1",
+    "prettier": "^3.9.10",
+    "raw-body": "3.0.2",
+    "react-server-dom-webpack": "19.2.6",
+    "sharp": "0.35.4",
+    "tsx": "^4.22.1",
+    "typescript": "5.9.3",
+    "vinext": "1.0.0-beta.5",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module",
+  "overrides": {
+    "miniflare": {
+      "sharp": "0.35.4"
+    }
+  },
+  "packageManager": "pnpm@11.25.0"
+}

@@ -1,0 +1,30 @@
+{
+  "serviceOptions": [
+    "Meta Ads",
+    "TikTok Ads",
+    "Google Ads",
+    "Content Marketing",
+    "Business Analysis",
+    "Help me choose"
+  ],
+  "goalOptions": [
+    "More qualified leads",
+    "More online sales",
+    "Brand awareness",
+    "Clearer processes & documentation",
+    "A better strategy"
+  ],
+  "budgetOptions": [
+    "Under $500",
+    "$500–$1,500",
+    "$1,500–$5,000",
+    "$5,000+",
+    "Let's discuss"
+  ],
+  "timelineOptions": [
+    "As soon as possible",
+    "Within a month",
+    "In 1–3 months",
+    "Just exploring"
+  ]
+}

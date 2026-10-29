@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "src": "/assets/sample-female-portrait.webp",
+    "alt": "AI-generated sample portrait of a female professional; not Zainab Abdullah",
+    "width": 1122,
+    "height": 1402,
+    "sample": true,
+    "objectPosition": "center 28%"
+  },
+  "secondary": {
+    "src": "/assets/sample-female-office.webp",
+    "alt": "AI-generated sample image of a female professional working at a laptop; not Zainab Abdullah",
+    "width": 1440,
+    "height": 960,
+    "sample": true,
+    "objectPosition": "46% 28%"
+  }
+}
