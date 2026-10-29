@@ -1,3 +1,4 @@
+import { saveSupabaseLead } from "./supabase";
 import { getDatabase } from "@/lib/server/runtime";
 import { leadSchema } from "@/features/leads/schema";
 const reply = (data: unknown, status = 200) =>
@@ -43,7 +44,10 @@ export async function submitLead(request: Request) {
     );
   const data = parsed.data;
   if (data.companyFax) return reply({ id: data.requestId });
-  if (!db)
+  if (
+    !db &&
+    !(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
+  )
     return reply(
       {
         error:
@@ -52,7 +56,10 @@ export async function submitLead(request: Request) {
       503,
     );
   try {
-    const ip = request.headers.get("cf-connecting-ip") || "local-preview",
+    const ip =
+        (process.env.VERCEL
+          ? request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim()
+          : request.headers.get("cf-connecting-ip")) || "unknown",
       today = new Date().toISOString().slice(0, 10);
     const bytes = await crypto.subtle.digest(
       "SHA-256",
@@ -62,6 +69,18 @@ export async function submitLead(request: Request) {
       .map((b) => b.toString(16).padStart(2, "0"))
       .join("");
     const now = Date.now();
+    if (!db) {
+      const result = await saveSupabaseLead(data, sourceHash);
+      if (result.limited)
+        return reply(
+          {
+            error:
+              "Several briefs have been sent recently. Please try again in an hour or connect on LinkedIn.",
+          },
+          429,
+        );
+      return reply({ id: result.id }, 201);
+    }
     const existing = await db
       .prepare("SELECT id FROM leads WHERE id = ? AND source_hash = ?")
       .bind(data.requestId, sourceHash)
