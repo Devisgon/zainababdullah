@@ -52,3 +52,15 @@ yarn-error.log*
 .env*.local
 .env
 .vercel
+
+# Hosting and assistant state; never publish these
+/.openai/
+/.vercel/
+/.cursor/
+/worker/
+/cloudflare-env.d.ts
+/vite.config.ts
+/docs/build-verification.json
+/playwright-report/
+/test-results/
+!/.env.example

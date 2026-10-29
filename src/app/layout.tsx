@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Zainab Abdullah",
-    title: "Less guesswork. More good growth. | Zainab Abdullah",
+    title: "Meta, TikTok & Google Ads | Zainab Abdullah",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     images: [
@@ -32,7 +32,17 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/og-image.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 export default function RootLayout({

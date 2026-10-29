@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 import { listBlogPosts } from "@/features/blog/server/repository";
 import { SITE_URL } from "@/lib/content/site";
 const xml = (v: string) =>
@@ -20,7 +20,7 @@ export async function GET() {
     {
       headers: {
         "Content-Type": "application/rss+xml; charset=utf-8",
-        "Cache-Control": "no-store",
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=60",
       },
     },
   );

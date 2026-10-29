@@ -1,5 +1,6 @@
+import { markets } from "@/features/markets/content";
 import { publishedSlugs } from "@/features/blog/server/repository";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 import { SITE_URL } from "@/lib/content/site";
 import { services } from "@/features/services/content";
 import { workProjects, clientReviews } from "@/lib/content/trust";
@@ -8,6 +9,8 @@ export async function GET() {
   const paths = [
     "/",
     "/services",
+    "/markets",
+    ...markets.map((m) => `/markets/${m.slug}`),
     "/about",
     "/contact",
     "/faq",
@@ -23,7 +26,7 @@ export async function GET() {
     {
       headers: {
         "Content-Type": "application/xml; charset=utf-8",
-        "Cache-Control": "no-store",
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=60",
       },
     },
   );

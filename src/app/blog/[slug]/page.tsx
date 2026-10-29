@@ -11,6 +11,7 @@ import { articleDate, readingMinutes } from "@/features/blog/schema";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { SITE_URL } from "@/lib/content/site";
 export const revalidate = 60;
+export const dynamic = "force-static";
 export const dynamicParams = true;
 export async function generateStaticParams() {
   return (await publishedSlugs()).map(({ slug }) => ({ slug }));

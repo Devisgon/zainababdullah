@@ -1,5 +1,7 @@
 import { revalidatePath } from "next/cache";
-import { getDatabase } from "@/lib/server/runtime";
+import { getDb } from "@/lib/db";
+import { blogPosts } from "@/lib/db/schema";
+import { and, eq } from "drizzle-orm";
 import { getRequestEditor } from "@/features/blog/server/auth";
 import { blogInputSchema } from "@/features/blog/schema";
 import {
@@ -15,7 +17,7 @@ const json = (data: unknown, status = 200) =>
     },
   });
 export async function listEditorArticles(request: Request) {
-  const auth = getRequestEditor(request);
+  const auth = await getRequestEditor(request);
   if (!auth.user)
     return json(
       {
@@ -41,8 +43,8 @@ export async function listEditorArticles(request: Request) {
   }
 }
 export async function saveArticle(request: Request) {
-  const db = getDatabase();
-  const auth = getRequestEditor(request);
+  const db = getDb();
+  const auth = await getRequestEditor(request);
   if (!auth.user)
     return json(
       {
@@ -112,45 +114,40 @@ export async function saveArticle(request: Request) {
       data.status === "published"
         ? prior?.publishedAt || now
         : prior?.publishedAt || null;
-    const values = [
-      data.slug,
-      data.title,
-      data.excerpt,
-      data.content,
-      data.category,
-      data.status,
-      data.coverImage || null,
-      data.coverAlt || null,
-      data.metaTitle || null,
-      data.metaDescription || null,
-      "Zainab Abdullah",
-      prior?.createdAt || now,
-      now,
+    const values = {
+      slug: data.slug,
+      title: data.title,
+      excerpt: data.excerpt,
+      content: data.content,
+      category: data.category,
+      status: data.status,
+      coverImage: data.coverImage || null,
+      coverAlt: data.coverAlt || null,
+      metaTitle: data.metaTitle || null,
+      metaDescription: data.metaDescription || null,
+      author: "Zainab Abdullah",
+      createdAt: prior?.createdAt || now,
+      updatedAt: now,
       publishedAt,
-      auth.user.userId,
-    ];
+      editedBy: auth.user.userId,
+    };
     if (prior) {
-      const result = await db
-        .prepare(
-          "UPDATE blog_posts SET slug=?,title=?,excerpt=?,content=?,category=?,status=?,cover_image=?,cover_alt=?,meta_title=?,meta_description=?,author=?,created_at=?,updated_at=?,published_at=?,edited_by=? WHERE id=? AND updated_at=?",
+      const changed = await db
+        .update(blogPosts)
+        .set(values)
+        .where(
+          and(eq(blogPosts.id, id), eq(blogPosts.updatedAt, prior.updatedAt)),
         )
-        .bind(...values, id, prior.updatedAt)
-        .run();
-      if (!result.meta.changes)
+        .returning({ id: blogPosts.id });
+      if (!changed.length)
         return json(
           {
             error:
-              "This article changed while saving. Reload it before trying again.",
+              "This article changed while saving. Reload before trying again.",
           },
           409,
         );
-    } else
-      await db
-        .prepare(
-          "INSERT INTO blog_posts (slug,title,excerpt,content,category,status,cover_image,cover_alt,meta_title,meta_description,author,created_at,updated_at,published_at,edited_by,id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-        )
-        .bind(...values, id)
-        .run();
+    } else await db.insert(blogPosts).values({ ...values, id });
     if (data.status === "published" || prior?.status === "published") {
       try {
         for (const path of [
@@ -170,7 +167,10 @@ export async function saveArticle(request: Request) {
     }
     return json({ post: await getEditorPost(id) }, prior ? 200 : 201);
   } catch (error) {
-    if (String(error).includes("UNIQUE"))
+    if (
+      String(error).includes("unique") ||
+      (error as { cause?: { code?: string } })?.cause?.code === "23505"
+    )
       return json(
         {
           error: "That article URL is already in use. Choose a different slug.",

@@ -6083,3 +6083,5 @@ textarea:focus-visible {
     font-size: 16px;
   }
 }
+
+.market-copy {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin:2rem 0}.market-copy p {line-height:1.8}.studio-access form {display:grid;gap:1rem;max-width:30rem}.studio-access label {display:grid;gap:.5rem}.studio-access input {padding:.8rem;background:var(--bg);color:inherit;border:1px solid currentColor;border-radius:.5rem}@media(max-width:700px){.market-copy{grid-template-columns:1fr}}

@@ -1,5 +1,4 @@
 import { saveSupabaseLead } from "./supabase";
-import { getDatabase } from "@/lib/server/runtime";
 import { leadSchema } from "@/features/leads/schema";
 const reply = (data: unknown, status = 200) =>
   Response.json(data, {
@@ -10,7 +9,6 @@ const reply = (data: unknown, status = 200) =>
     },
   });
 export async function submitLead(request: Request) {
-  const db = getDatabase();
   const origin = request.headers.get("origin");
   if (!origin || origin !== new URL(request.url).origin)
     return reply({ error: "Please send your enquiry from this website." }, 403);
@@ -44,10 +42,7 @@ export async function submitLead(request: Request) {
     );
   const data = parsed.data;
   if (data.companyFax) return reply({ id: data.requestId });
-  if (
-    !db &&
-    !(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
-  )
+  if (!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY))
     return reply(
       {
         error:
@@ -68,31 +63,8 @@ export async function submitLead(request: Request) {
     const sourceHash = Array.from(new Uint8Array(bytes))
       .map((b) => b.toString(16).padStart(2, "0"))
       .join("");
-    const now = Date.now();
-    if (!db) {
-      const result = await saveSupabaseLead(data, sourceHash);
-      if (result.limited)
-        return reply(
-          {
-            error:
-              "Several briefs have been sent recently. Please try again in an hour or connect on LinkedIn.",
-          },
-          429,
-        );
-      return reply({ id: result.id }, 201);
-    }
-    const existing = await db
-      .prepare("SELECT id FROM leads WHERE id = ? AND source_hash = ?")
-      .bind(data.requestId, sourceHash)
-      .first<{ id: string }>();
-    if (existing) return reply({ id: existing.id });
-    const count = await db
-      .prepare(
-        "SELECT COUNT(*) AS total FROM leads WHERE source_hash = ? AND created_at > ?",
-      )
-      .bind(sourceHash, now - 3600000)
-      .first<{ total: number }>();
-    if ((count?.total || 0) >= 5)
+    const result = await saveSupabaseLead(data, sourceHash);
+    if (result.limited)
       return reply(
         {
           error:
@@ -100,31 +72,7 @@ export async function submitLead(request: Request) {
         },
         429,
       );
-    await db
-      .prepare(
-        "INSERT INTO leads (id,services,goal,budget,timeline,business,website,country,context,name,email,whatsapp,consent,consent_version,source_hash,created_at,status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-      )
-      .bind(
-        data.requestId,
-        JSON.stringify(data.services),
-        data.goal,
-        data.budget,
-        data.timeline,
-        data.business,
-        data.website,
-        data.country,
-        data.context,
-        data.name,
-        data.email.toLowerCase(),
-        data.whatsapp,
-        1,
-        "2026-10-27-v3",
-        sourceHash,
-        now,
-        "new",
-      )
-      .run();
-    return reply({ id: data.requestId }, 201);
+    return reply({ id: result.id }, 201);
   } catch {
     return reply(
       {

@@ -10,6 +10,7 @@ export function Footer() {
           </a>
           <div className="footer-navigation">
             <a href="/services">Services</a>
+            <a href="/markets">Markets</a>
             <a href="/work">My work</a>
             <a href="/about">About</a>
             <a href="/reviews">Client reviews</a>

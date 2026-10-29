@@ -1,3 +1,4 @@
+import { MarketLinks } from "@/features/markets/components/market-links";
 import { PageShell } from "@/components/layout/page-shell";
 import { JsonLd } from "@/components/seo/json-ld";
 import { homeSchema } from "@/lib/seo/home-schema";
@@ -23,6 +24,7 @@ export default function Home() {
       <HeroSection />
       <ChannelStrip />
       <ServicesSection />
+      <MarketLinks />
       <AboutSection />
       <ProcessSection />
       <TrustSections />

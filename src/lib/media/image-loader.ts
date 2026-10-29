@@ -10,7 +10,7 @@ type ImageManifest = Record<
   }
 >;
 
-/** Prebuilt responsive assets work on both Next.js and Sites without a paid image service. */
+/** Prebuilt responsive assets are served by the Next.js custom loader. */
 export default function imageLoader({ src, width }: ImageLoaderProps): string {
   const asset = (manifest as ImageManifest)[src];
   if (!asset) return src;

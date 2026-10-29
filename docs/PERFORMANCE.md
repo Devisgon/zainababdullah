@@ -1,35 +1,18 @@
-# Performance and search verification
+# Rendering and performance
 
-## Implemented
+| Route | Technique | Reason |
+| --- | --- | --- |
+| Home | ISR, 60 seconds | Fast HTML with refreshed published articles |
+| Services, markets, about, contact, FAQ | SSG | JSON content changes on deployment |
+| Blog article | ISR, 60 seconds; known slugs prerendered; unknown published slugs generated on demand | Daily publishing without rebuilding every article |
+| Blog list/search/pagination | SSR | Query parameters determine results; searches excluded from indexing |
+| Sitemap, feed, llms.txt | ISR, one hour | Server-generated discovery documents |
+| Studio, authenticated APIs, form submission | Dynamic, private/no-store | User identity, drafts and writes must remain current |
 
-- Real Next.js production build with React Server Components and build-time static generation.
-- Known service slugs prebuilt; missing slugs return 404.
-- Homepage and published-article ISR at 60 seconds, with publish/unpublish path invalidation.
-- Durable HTML/RSC caching in the Sites deployment, namespaced per build.
-- Fingerprinted responsive WebP portraits delivered with `next/image`, `sizes`, intrinsic dimensions, a high-priority hero and lazy secondary images.
-- Self-hosted fonts with swap rendering; no third-party font request or mandatory animation framework.
-- Client components limited to interactive controls; server-rendered marketing content.
-- Editor-only stylesheet separated from public pages. The blog-writing/Markdown editor bundle is not an initial homepage dependency.
-- Explicit canonical URLs, page metadata, Open Graph/Twitter, escaped structured data, XML sitemap, robots, RSS and `llms.txt`.
-- Private/draft content excluded from discovery, with explicit uncached editor/API routes.
-- Responsive CSS, reduced-motion support, keyboard service tabs, visible focus and mobile-friendly touch targets/form fields.
+Publishing/unpublishing calls revalidatePath for home, blog, the article, sitemap, feed and llms.txt. Regeneration occurs on the next request; the timed ISR window is a fallback, not a cron job. JSON edits need a deployment. Never use static export (`output: export`), which would remove runtime publishing and ISR.
 
-## Required checks
+Next.js handles HTML caching on Vercel. Responsive portrait assets are generated with sharp and named by content hash; a custom next/image loader chooses existing WebP widths. Above-the-fold imagery uses responsive preloading; below-the-fold images are lazy. Local fonts avoid a remote font request. Fingerprinted image variants have immutable cache headers.
 
-```sh
-pnpm validate:content
-pnpm typecheck
-pnpm check
-pnpm build
-node scripts/check-build.mjs
-```
+Do not cache editor or API responses through an external CDN. Search and studio access do not make the entire public site dynamic because authentication is only read on private routes.
 
-`check-build.mjs` asserts actual Next.js static/ISR output, verifies rendered titles/canonicals/headings, checks the hosted prerendered service files, and reports referenced homepage script/CSS transfer sizes. These are build measurements, not field Core Web Vitals.
-
-The automated tests execute real SQLite SQL against isolated in-memory databases. They cover required WhatsApp, normalized persistence, submission idempotency, draft isolation, cache persistence, binary RSC serialization, stale/expired entries, cross-build separation, invalidation, protection against older renders completing after invalidation, and concurrent request isolation. They also check structured-data escaping and responsive image selection. Production client records are never test fixtures.
-
-## Limits and follow-up
-
-A performance score is only valid after measuring the final deployed public URL on representative devices and networks. This private preview's sign-in gate prevents an ordinary public Lighthouse/PageSpeed crawl. There is no measured Lighthouse or CrUX score to claim yet. After public launch, run mobile Lighthouse/PageSpeed and review real LCP, INP and CLS as traffic becomes available.
-
-Search-friendly markup makes pages understandable; it does not guarantee indexing, ranking or AI recommendations. Crawlers need public access. Keep content useful and factual, publish real work/reviews, and register the final domain with Google Search Console and Bing Webmaster Tools after launch.
+Verify with `pnpm build` route output and inspect `.next/prerender-manifest.json`. Actual Lighthouse, Core Web Vitals and regional latency must be measured against the configured production deployment; build success is not a speed score or a ranking guarantee.

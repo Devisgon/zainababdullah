@@ -1,8 +1,8 @@
 import "@/features/blog/styles/editor.css";
 import { PageShell } from "@/components/layout/page-shell";
 import { BlogEditor } from "@/features/blog/components/blog-editor";
-import { getChatGPTUser, chatGPTSignInPath } from "@/lib/platform/chatgpt-auth";
-import { isBlogEditor } from "@/features/blog/server/auth";
+import { getPageEditor } from "@/features/blog/server/auth";
+import { BlogLogin } from "@/features/blog/components/blog-login";
 import { listBlogPosts } from "@/features/blog/server/repository";
 export const dynamic = "force-dynamic";
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 export default async function BlogStudio() {
-  const user = await getChatGPTUser();
+  const user = await getPageEditor();
   if (!user)
     return (
       <PageShell>
@@ -21,37 +21,7 @@ export default async function BlogStudio() {
             <br />
             <span className="serif">One sign-in away.</span>
           </h1>
-          <p>
-            Sign in with the ChatGPT account authorised to manage this website’s
-            articles.
-          </p>
-          <a
-            href={chatGPTSignInPath("/studio/blog")}
-            target="_top"
-            className="button"
-          >
-            Sign in to the blog editor ↗
-          </a>
-        </section>
-      </PageShell>
-    );
-  if (!isBlogEditor(user))
-    return (
-      <PageShell>
-        <section className="container studio-access">
-          <span className="eyebrow">PUBLISHING ACCESS REQUIRED</span>
-          <h1>
-            This is the
-            <br />
-            <span className="serif">editor’s space.</span>
-          </h1>
-          <p>
-            This account does not have permission to manage articles. Use the
-            account authorised by the website owner.
-          </p>
-          <a href="/blog" className="button">
-            Read the blog ↗
-          </a>
+          <BlogLogin url={process.env.SUPABASE_URL||""} anonKey={process.env.SUPABASE_ANON_KEY||""} />
         </section>
       </PageShell>
     );

@@ -4,7 +4,7 @@ export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
-  const auth = getRequestEditor(request);
+  const auth = await getRequestEditor(request);
   if (!auth.user)
     return Response.json(
       {

@@ -1,3 +1,5 @@
+import { marketAreas } from "@/features/markets/content";
+import { MarketLinks } from "@/features/markets/components/market-links";
 import { JsonLd } from "@/components/seo/json-ld";
 export const dynamicParams = false;
 import type { Metadata } from "next";
@@ -54,13 +56,14 @@ export default async function ServicePage({ params }: Props) {
           name: "Zainab Abdullah",
           url: SITE_URL,
         },
-        areaServed: "Worldwide",
+        areaServed: marketAreas,
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: s.name, item: url },
+          { "@type": "ListItem", position: 2, name: "Services", item: SITE_URL+"/services" },
+          { "@type": "ListItem", position: 3, name: s.name, item: url },
         ],
       },
       {
@@ -156,6 +159,7 @@ export default async function ServicePage({ params }: Props) {
               ))}
           </div>
         </section>
+        <MarketLinks />
         <section className="detail-cta">
           <div className="container">
             <h2>

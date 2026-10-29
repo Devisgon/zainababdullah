@@ -4,7 +4,7 @@ import imageLoader from "@/lib/media/image-loader";
 import manifest from "@/lib/media/image-manifest.json";
 
 type Asset = { variants: { src: string; width: number }[] };
-/** Explicit srcset preserves responsive loading in both the Next.js and Sites runtimes. */
+/** Explicit srcset preserves responsive loading through the Next.js image loader. */
 export function OptimizedImage({
   preload = false,
   ...props

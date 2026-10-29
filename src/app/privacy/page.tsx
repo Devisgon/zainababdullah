@@ -21,7 +21,7 @@ export default function Privacy() {
           <span>Privacy</span>
         </nav>
         <span className="eyebrow">
-          LAST UPDATED: 27 OCTOBER 2026 · VERSION 3
+          LAST UPDATED: 30 OCTOBER 2026 · VERSION 4
         </span>
         <h1>
           Privacy &<br />
@@ -51,7 +51,7 @@ export default function Privacy() {
         <p>
           Project briefs are stored in the website’s hosted database for review
           by Zainab and authorised website administrators. The hosting provider
-          processes the data needed to serve the site. A daily changing hash
+          processes the data needed to serve the site. Vercel hosts the website and Supabase stores enquiries and articles. A daily changing hash
           derived from a technical network identifier is stored to limit
           repeated submissions; the form database does not store the raw network
           address. The hosting provider may separately process technical access
@@ -61,7 +61,7 @@ export default function Privacy() {
         <p>
           This version of the website does not install advertising pixels or
           marketing analytics. The hosting service may use essential cookies for
-          access, authentication or security. Your form answers remain in page
+          access, authentication or security. The blog editor uses an essential, one-hour session cookie for authorised publishing. Your form answers remain in page
           memory while you complete the enquiry; they are not saved to browser
           storage by this website. Your light or dark theme preference is saved
           locally in your browser so it can be remembered between visits.

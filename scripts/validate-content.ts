@@ -96,3 +96,23 @@ z.object({
   revalidateSeconds: z.number().positive(),
 }).parse(settings);
 console.log("JSON content and referenced media validated.");
+
+const markets = z
+  .array(
+    z.object({
+      slug,
+      name: nonempty,
+      label: nonempty,
+      code: z.string().length(2),
+      currency: nonempty,
+      timezone: nonempty,
+      title: nonempty,
+      description: nonempty,
+      intro: nonempty,
+      sections: z.array(z.tuple([nonempty, nonempty])).min(3),
+      questions: z.array(z.tuple([nonempty, nonempty])).min(1),
+    }),
+  )
+  .parse(read("markets"));
+if (new Set(markets.map((m) => m.slug)).size !== markets.length)
+  throw new Error("Duplicate market URL");
