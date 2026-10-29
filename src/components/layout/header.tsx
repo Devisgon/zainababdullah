@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { BrandLogo } from "./brand-logo";
 import { site } from "@/lib/content/site";
 const navigation = site.navigation;
 export function Header() {
@@ -13,12 +14,7 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a href="/" className="brand" aria-label="Zainab Abdullah home">
-          <span className="brand-mark">
-            za<span>✳</span>
-          </span>
-          <span className="brand-name">
-            zainab abdullah<span>PAID ADS. HUMAN INSIGHT.</span>
-          </span>
+          <BrandLogo />
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
           {navigation.map(([label, url]) => (

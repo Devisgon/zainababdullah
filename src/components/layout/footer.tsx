@@ -1,12 +1,18 @@
 import { ArrowUpRight } from "lucide-react";
+import { BrandLogo } from "./brand-logo";
 import { SocialLinks } from "./social-links";
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="footer-main">
-          <a href="/" className="footer-brand">
-            zainab abdullah<span>Strategy with a human side.</span>
+          <a
+            href="/"
+            className="footer-brand"
+            aria-label="Zainab Abdullah home"
+          >
+            <BrandLogo />
+            <span className="footer-tagline">Strategy with a human side.</span>
           </a>
           <div className="footer-navigation">
             <a href="/services">Services</a>

@@ -112,7 +112,7 @@
   background: var(--surface);
 }
 .studio-post.active {
-  box-shadow: inset 3px 0 0 #87a44c;
+  box-shadow: inset 3px 0 0 #60718a;
   background: var(--paper);
 }
 .studio-post > strong {
@@ -185,7 +185,7 @@
 }
 .editor-view-tabs > button[aria-pressed="true"] {
   background: var(--paper);
-  box-shadow: 0 1px 3px #22271f10;
+  box-shadow: 0 1px 3px #11284910;
 }
 .editor-fields {
   border: 0;
@@ -219,7 +219,7 @@
   font-size: 12px;
   line-height: 1.6;
   padding: 11px 12px;
-  border: 1px solid #c8d1bc;
+  border: 1px solid #cbd6e5;
   border-radius: 4px;
   background: var(--paper);
   color: var(--ink);
@@ -263,7 +263,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
-  border: 1px solid #c8d1bc;
+  border: 1px solid #cbd6e5;
   border-bottom: 0;
   border-radius: 4px 4px 0 0;
   background: var(--surface-soft);
@@ -381,9 +381,9 @@
   font-size: 11px;
   line-height: 1.7;
   padding: 12px 15px;
-  border: 1px solid #bbd09f;
-  background: #e8f2d8;
-  color: #4a692d;
+  border: 1px solid #cbd6e5;
+  background: #e8eef6;
+  color: #4d617d;
   border-radius: 4px;
 }
 .editor-error {
@@ -445,17 +445,17 @@
 [data-theme="dark"] .editor-field > textarea,
 [data-theme="dark"] .editor-field > select,
 [data-theme="dark"] .editor-toolbar {
-  border-color: #526643;
+  border-color: #4d617d;
 }
 [data-theme="dark"] .studio-filters > button[aria-pressed="true"] {
   background: var(--lime);
-  color: #22271f;
+  color: #0b1d3a;
   border-color: var(--lime);
 }
 [data-theme="dark"] .editor-message {
-  background: #2e431f;
-  border-color: #607e44;
-  color: #d6eac0;
+  background: #304967;
+  border-color: #60718a;
+  color: #e8eef6;
 }
 [data-theme="dark"] .editor-error {
   background: #3c2822;

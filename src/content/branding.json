@@ -1,0 +1,12 @@
+{
+  "colors": {
+    "green": "#92C948",
+    "navy": "#0B1D3A"
+  },
+  "logo": {
+    "light": "/assets/brand/logo-light.webp",
+    "dark": "/assets/brand/logo-dark.webp",
+    "width": 640,
+    "height": 225
+  }
+}
