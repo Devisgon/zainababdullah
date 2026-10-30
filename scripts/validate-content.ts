@@ -42,6 +42,7 @@ const reviews = z
       clientName: nonempty,
       platform: z.enum(["Fiverr", "Upwork", "Direct"]),
       rating: z.number().min(1).max(5).optional(),
+      projectValueUsd: z.number().int().positive().optional(),
       service: nonempty.optional(),
       sourceUrl: z.string().url().optional(),
     }),

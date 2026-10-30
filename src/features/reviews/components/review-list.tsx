@@ -1,5 +1,10 @@
 import { ArrowUpRight, MessageSquare, Quote, Star } from "lucide-react";
 import { clientReviews } from "@/lib/content/trust";
+const projectValueFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+});
 export function ReviewList({ limit }: { limit?: number }) {
   const items = limit ? clientReviews.slice(0, limit) : clientReviews;
   return items.length ? (
@@ -49,6 +54,15 @@ export function ReviewList({ limit }: { limit?: number }) {
               <strong>{review.clientName}</strong>
               {review.clientRole && <span>{review.clientRole}</span>}
               {review.service && <small>{review.service}</small>}
+              {review.projectValueUsd !== undefined && (
+                <dl className="review-project-value">
+                  <dt>Project size</dt>
+                  <dd>
+                    {projectValueFormatter.format(review.projectValueUsd)}{" "}
+                    <span>USD</span>
+                  </dd>
+                </dl>
+              )}
             </figcaption>
             {isPreview && quote !== review.quote ? (
               <a className="text-link" href={`/reviews#${review.id}`}>

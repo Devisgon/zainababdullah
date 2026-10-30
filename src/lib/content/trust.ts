@@ -17,6 +17,7 @@ export type ClientReview = {
   clientRole?: string;
   platform: "Upwork" | "Fiverr" | "Direct";
   rating?: number;
+  projectValueUsd?: number;
   sourceUrl?: string;
   service?: string;
   date?: string;

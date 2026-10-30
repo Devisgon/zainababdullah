@@ -24,12 +24,6 @@ export default function Reviews() {
             <strong>{clientReviews.length} reviews</strong>
             <span>Each rated 5.0 out of 5 on Fiverr</span>
           </div>
-          <div>
-            <strong>
-              $500–$2,250 <small>USD</small>
-            </strong>
-            <span>Project values across these engagements</span>
-          </div>
         </div>
         <ReviewList />
       </section>

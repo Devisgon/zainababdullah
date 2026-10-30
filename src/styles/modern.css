@@ -646,7 +646,7 @@ body {
 /* Client feedback stays readable in both themes, including longer reviews. */
 .review-summary {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   padding: 26px 30px;
   margin-bottom: 28px;
@@ -659,10 +659,6 @@ body {
   font-size: clamp(24px, 3vw, 32px);
   letter-spacing: -0.8px;
   line-height: 1.3;
-}
-.review-summary strong small {
-  font-size: 13px;
-  letter-spacing: 0;
 }
 .review-summary span,
 .reviews-intro {
@@ -724,6 +720,31 @@ body {
 .review-card figcaption > small {
   font-size: 12px;
   line-height: 1.6;
+}
+.review-project-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  font-size: 13px;
+}
+.review-project-value dt {
+  color: var(--muted);
+}
+.review-project-value dd {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+.review-project-value dd span {
+  font-size: 11px;
+  color: var(--muted);
 }
 .review-card > .text-link {
   align-self: flex-start;
