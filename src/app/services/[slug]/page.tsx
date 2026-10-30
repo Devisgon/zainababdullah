@@ -1,3 +1,4 @@
+import { SOCIAL_IMAGE } from "@/lib/seo/metadata";
 import { marketAreas } from "@/features/markets/content";
 import { MarketLinks } from "@/features/markets/components/market-links";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -25,13 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: s.description,
       url: `${SITE_URL}/services/${s.slug}`,
       type: "website",
-      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+      locale: "en_US",
+      siteName: "Zainab Abdullah",
+      images: [SOCIAL_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: s.seoTitle,
       description: s.description,
-      images: ["/og-image.png"],
+      images: [{ url: SOCIAL_IMAGE.url, alt: SOCIAL_IMAGE.alt }],
     },
   };
 }
@@ -62,7 +65,12 @@ export default async function ServicePage({ params }: Props) {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "Services", item: SITE_URL+"/services" },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: SITE_URL + "/services",
+          },
           { "@type": "ListItem", position: 3, name: s.name, item: url },
         ],
       },

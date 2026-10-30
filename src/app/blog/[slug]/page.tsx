@@ -32,6 +32,19 @@ export async function generateMetadata({ params }: Props) {
   );
   return {
     ...meta,
+    twitter: {
+      ...meta.twitter,
+      ...(post.coverImage
+        ? {
+            images: [
+              {
+                url: new URL(post.coverImage, SITE_URL).toString(),
+                alt: post.coverAlt || post.title,
+              },
+            ],
+          }
+        : {}),
+    },
     openGraph: {
       ...meta.openGraph,
       type: "article",

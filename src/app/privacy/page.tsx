@@ -1,12 +1,12 @@
 import { Header, Footer } from "@/components/layout/site-chrome";
-import { LINKEDIN_URL, SITE_URL } from "@/lib/content/site";
-export const metadata = {
-  title: "Privacy & Your Data | Zainab Abdullah",
-  description:
-    "How project enquiry information is collected and used on Zainab Abdullah’s website.",
-  alternates: { canonical: SITE_URL + "/privacy" },
-  robots: { index: false, follow: true },
-};
+import { LINKEDIN_URL } from "@/lib/content/site";
+import { pageMetadata } from "@/lib/seo/metadata";
+export const metadata = pageMetadata(
+  "Privacy & Your Data",
+  "How project enquiry information is collected and used on Zainab Abdullah’s website.",
+  "/privacy",
+  false,
+);
 export default function Privacy() {
   return (
     <>

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { SOCIAL_IMAGE } from "@/lib/seo/metadata";
 import { SITE_URL, SITE_DESCRIPTION } from "@/lib/content/site";
 import "./globals.css";
 export const viewport: Viewport = {
@@ -24,20 +25,13 @@ export const metadata: Metadata = {
     title: "Meta, TikTok & Google Ads | Zainab Abdullah",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Zainab Abdullah — Paid ads. Human insight.",
-      },
-    ],
+    images: [SOCIAL_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zainab Abdullah | Paid Ads & Growth Strategy",
     description: SITE_DESCRIPTION,
-    images: ["/og-image.png"],
+    images: [{ url: SOCIAL_IMAGE.url, alt: SOCIAL_IMAGE.alt }],
   },
   robots: {
     index: true,

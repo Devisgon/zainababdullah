@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/content/site";
+import seo from "@/content/seo.json";
+const imageUrl = new URL(seo.socialImage.src, SITE_URL).toString();
+export const SOCIAL_IMAGE = {
+  url: imageUrl,
+  secureUrl: imageUrl,
+  width: seo.socialImage.width,
+  height: seo.socialImage.height,
+  type: seo.socialImage.type,
+  alt: seo.socialImage.alt,
+};
 export function pageMetadata(
   title: string,
   description: string,
@@ -17,13 +27,14 @@ export function pageMetadata(
       url: SITE_URL + path,
       siteName: "Zainab Abdullah",
       type: "website",
-      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+      locale: "en_US",
+      images: [SOCIAL_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} | Zainab Abdullah`,
       description,
-      images: ["/og-image.png"],
+      images: [{ url: SOCIAL_IMAGE.url, alt: SOCIAL_IMAGE.alt }],
     },
   };
 }
