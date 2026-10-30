@@ -613,3 +613,44 @@ body {
   border-radius: 0;
   padding: 18px 20px;
 }
+
+/* A LinkedIn-length career headline split into readable website tiers. */
+.about-hero h1.about-career-headline {
+  margin: 24px 0;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+.about-title-role {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.about-title-main {
+  display: block;
+  font-size: clamp(34px, 4.3vw, 60px);
+}
+.about-title-specialisms {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 20px;
+}
+@media (max-width: 700px) {
+  .about-title-main {
+    font-size: clamp(32px, 8.2vw, 45px);
+  }
+  .about-title-role {
+    font-size: 14px;
+  }
+  .about-title-specialisms {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}

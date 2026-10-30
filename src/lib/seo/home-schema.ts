@@ -12,9 +12,9 @@ export function homeSchema() {
         name: "Zainab Abdullah",
         url: SITE_URL,
         sameAs: [LINKEDIN_URL],
-        jobTitle: "Digital Marketing Expert & Business Analyst",
-        description:
-          "Digital marketing professional since July 2026, with a psychology background and more than two years of business analysis experience.",
+        jobTitle: site.jobTitle,
+        description: site.bio,
+        worksFor: { "@type": "Organization", name: "Devisgon Private Limited" },
         knowsAbout: [
           "Meta Ads",
           "TikTok Ads",

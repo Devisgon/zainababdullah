@@ -3,29 +3,14 @@
   "siteUrl": "https://www.zainababdullah.tech",
   "linkedInUrl": "https://www.linkedin.com/in/zainab-abdullah-118100207/",
   "description": "Meta, TikTok and Google Ads management for businesses in the USA, Saudi Arabia, Kuwait and Qatar. Remote campaign strategy with Zainab Abdullah.",
-  "jobTitle": "Digital Marketing Expert & Business Analyst",
-  "bio": "Digital marketing professional since July 2026, with a psychology background and more than two years of business analysis experience.",
+  "jobTitle": "CEO, Devisgon Private Limited | Digital Marketer",
+  "bio": "CEO of Devisgon Private Limited and a psychology graduate turned digital marketer. Professional focus on paid ads, social media and content marketing since August 2026, supported by more than two years in business analysis.",
   "navigation": [
-    [
-      "Services",
-      "/services"
-    ],
-    [
-      "My work",
-      "/work"
-    ],
-    [
-      "About",
-      "/about"
-    ],
-    [
-      "Reviews",
-      "/reviews"
-    ],
-    [
-      "Blog",
-      "/blog"
-    ]
+    ["Services", "/services"],
+    ["My work", "/work"],
+    ["About", "/about"],
+    ["Reviews", "/reviews"],
+    ["Blog", "/blog"]
   ],
   "socialProfiles": [
     {

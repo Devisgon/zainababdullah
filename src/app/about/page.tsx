@@ -4,10 +4,11 @@ import { PageShell, PageCTA } from "@/components/layout/page-shell";
 import { Portrait } from "@/components/media/portrait";
 import { SocialLinks } from "@/components/layout/social-links";
 import { pageMetadata } from "@/lib/seo/metadata";
-import { SITE_URL, LINKEDIN_URL } from "@/lib/content/site";
+import { SITE_URL, site } from "@/lib/content/site";
+import content from "@/content/about.json";
 export const metadata = pageMetadata(
-  "About Zainab Abdullah — Digital Marketer & Business Analyst",
-  "Meet Zainab Abdullah: digital marketer, psychologist and business analyst specialising in paid ads, content strategy, UML, BPMN and process mapping.",
+  "About — CEO & Digital Marketer",
+  "Meet Zainab Abdullah, CEO of Devisgon Private Limited. Discover her journey from psychology and business analysis to paid ads, social media and content marketing.",
   "/about",
 );
 export default function About() {
@@ -20,8 +21,12 @@ export default function About() {
       "@type": "Person",
       "@id": SITE_URL + "/#zainab",
       name: "Zainab Abdullah",
-      sameAs: [LINKEDIN_URL],
-      jobTitle: "Digital Marketer & Business Analyst",
+      sameAs: site.socialProfiles.flatMap((profile) =>
+        profile.url ? [profile.url] : [],
+      ),
+      jobTitle: site.jobTitle,
+      description: site.bio,
+      worksFor: { "@type": "Organization", name: "Devisgon Private Limited" },
     },
   };
   return (
@@ -35,20 +40,14 @@ export default function About() {
             <span>About</span>
           </nav>
           <span className="eyebrow">A HUMAN PERSPECTIVE. A BUSINESS MIND.</span>
-          <h1>
-            Hi, I’m Zainab.
-            <br />
-            <span className="serif">
-              Curious about people.
-              <br />
-              Clear about purpose.
+          <h1 className="about-career-headline">
+            <span className="about-title-role">{content.role}</span>
+            <span className="about-title-main">{content.headline}</span>
+            <span className="about-title-specialisms">
+              {content.specialisms}
             </span>
           </h1>
-          <p>
-            I’m a digital marketer, psychologist and business analyst. I bring
-            those perspectives together to understand your audience, clarify
-            your message and connect the work to your business goals.
-          </p>
+          <p>{content.intro}</p>
           <a href="/contact" className="button">
             Let’s talk about your business <ArrowUpRight size={18} />
           </a>
@@ -60,35 +59,11 @@ export default function About() {
           DIFFERENT EXPERIENCES. ONE CONNECTED APPROACH.
         </span>
         <div>
-          <h2>
-            There’s a person
-            <br />
-            <span className="serif">behind every decision.</span>
-          </h2>
+          <h2>{content.storyTitle}</h2>
           <div>
-            <p>
-              My psychology background shapes the way I think about motivations,
-              questions and the choices people make. In marketing, that
-              perspective helps me ask better questions about the audience and
-              the message.
-            </p>
-            <p>
-              My digital marketing work began in July 2026. Today, my main focus
-              is Meta ads, TikTok ads and Google Ads, with content marketing
-              supporting the wider strategy.
-            </p>
-            <p>
-              I also bring more than two years of business analysis experience.
-              That work includes UML diagrams, BPMN, swimlanes, process mapping,
-              workflows, architecture diagrams and technical documentation.
-            </p>
-            <p>
-              I’ve worked with clients around the world through Upwork and
-              Fiverr, and through connections on Instagram and LinkedIn. Whether
-              we’re discussing an ad campaign or a complex workflow, the
-              starting point is the same: understand the problem before choosing
-              the solution.
-            </p>
+            {content.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -139,29 +114,16 @@ export default function About() {
             <br />
             <span className="serif">A better starting point.</span>
           </h2>
-          <p>
-            Find me online, or share a project brief to start a focused
-            conversation about your business.
-          </p>
+          <p>{content.invitation}</p>
           <SocialLinks />
         </div>
         <div className="about-facts">
-          <span>
-            <Check size={17} />
-            Digital marketing since July 2026
-          </span>
-          <span>
-            <Check size={17} />
-            More than two years in business analysis
-          </span>
-          <span>
-            <Check size={17} />
-            Psychology background
-          </span>
-          <span>
-            <Check size={17} />
-            International, remote collaboration
-          </span>
+          {content.facts.map((fact) => (
+            <span key={fact}>
+              <Check size={17} />
+              {fact}
+            </span>
+          ))}
         </div>
       </section>
       <PageCTA />
