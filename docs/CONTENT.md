@@ -12,7 +12,7 @@ Social URLs are edited in site.json. Only real supplied URLs should become links
 
 ## Brand assets and themes
 
-Brand green is `#92C948`; brand navy is `#0B1D3A`. Shared theme tokens live in `src/styles/site.css`; logo URLs live in `src/content/branding.json`. The reusable BrandLogo component selects the supplied light/dark logo with CSS, avoiding a hydration flash. Logos have transparent backgrounds. Dark surfaces use a white treatment for legibility, without a backing badge. Optimised transparent WebP files are used in navigation and footer; original PNGs are retained as source assets.
+Brand green is `#92C948`; brand navy is `#0B1D3A`. Shared theme tokens live in `src/styles/site.css`; logo URLs live in `src/content/branding.json`. The reusable BrandLogo component selects the supplied light/dark logo with CSS, avoiding a hydration flash. Logos have transparent backgrounds. Dark surfaces use the supplied green and blue logo (`logo-dark-colour.webp`) without a colour filter or backing badge. Optimised transparent WebP files are used in navigation and footer; original PNGs are retained as source assets.
 
 The blog editor, form states, illustrations, favicon and social preview use the same palette. Semantic error colours and recognisable third-party platform colours are retained. The owner-supplied default social preview is `public/og-zainab-abdullah.jpg`; its actual dimensions, MIME type and alt text are configured in `src/content/seo.json`. Shared Open Graph and Twitter metadata use this image. Articles with a cover use that cover for their own previews. The legacy social-card generator does not overwrite this supplied image.
 

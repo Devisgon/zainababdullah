@@ -67,10 +67,10 @@ body {
   height: 100%;
   object-fit: contain;
 }
-/* A transparent white treatment keeps every letter readable without adding a badge. */
+/* Preserve the supplied green and blue artwork on dark surfaces. */
 [data-theme="dark"] .brand-logo .brand-logo-dark,
 .site-footer .brand-logo .brand-logo-dark {
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 .site-footer .brand-logo {
   width: 160px;
