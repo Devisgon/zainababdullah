@@ -33,51 +33,59 @@ function SocialIcon({ name }: { name: string }) {
     </svg>
   );
 }
-export function SocialLinks({ compact = false }: { compact?: boolean }) {
+export function SocialLinks({
+  compact = false,
+  hidePending = false,
+}: {
+  compact?: boolean;
+  hidePending?: boolean;
+}) {
   return (
     <div
       className={`social-links ${compact ? "social-compact" : ""}`}
       aria-label="Social profiles"
     >
-      {socialProfiles.map((profile) =>
-        profile.url ? (
-          <a
-            key={profile.name}
-            className="social-button"
-            href={profile.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Connect with Zainab on ${profile.name}`}
-            title={`Connect on ${profile.name}`}
-          >
-            <SocialIcon name={profile.name} />
-            {!compact && (
-              <>
-                <span>{profile.name}</span>
-                <ArrowUpRight size={14} />
-              </>
-            )}
-          </a>
-        ) : (
-          <span
-            key={profile.name}
-            className="social-button social-pending"
-            role="link"
-            aria-disabled="true"
-            aria-label={`${profile.name} profile link coming soon`}
-            title={`${profile.name} profile link coming soon`}
-            tabIndex={0}
-          >
-            <SocialIcon name={profile.name} />
-            {!compact && (
-              <>
-                <span>{profile.name}</span>
-                <small>Soon</small>
-              </>
-            )}
-          </span>
-        ),
-      )}
+      {socialProfiles
+        .filter((profile) => !hidePending || profile.url)
+        .map((profile) =>
+          profile.url ? (
+            <a
+              key={profile.name}
+              className="social-button"
+              href={profile.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Connect with Zainab on ${profile.name}`}
+              title={`Connect on ${profile.name}`}
+            >
+              <SocialIcon name={profile.name} />
+              {!compact && (
+                <>
+                  <span>{profile.name}</span>
+                  <ArrowUpRight size={14} />
+                </>
+              )}
+            </a>
+          ) : (
+            <span
+              key={profile.name}
+              className="social-button social-pending"
+              role="link"
+              aria-disabled="true"
+              aria-label={`${profile.name} profile link coming soon`}
+              title={`${profile.name} profile link coming soon`}
+              tabIndex={0}
+            >
+              <SocialIcon name={profile.name} />
+              {!compact && (
+                <>
+                  <span>{profile.name}</span>
+                  <small>Soon</small>
+                </>
+              )}
+            </span>
+          ),
+        )}
     </div>
   );
 }

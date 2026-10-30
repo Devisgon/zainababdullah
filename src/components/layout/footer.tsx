@@ -12,7 +12,9 @@ export function Footer() {
             aria-label="Zainab Abdullah home"
           >
             <BrandLogo />
-            <span className="footer-tagline">Strategy with a human side.</span>
+            <span className="footer-tagline">
+              Paid ads. Human insight. Strategy built around your business.
+            </span>
           </a>
           <div className="footer-navigation">
             <a href="/services">Services</a>
@@ -28,8 +30,7 @@ export function Footer() {
           </div>
           <div className="footer-social">
             <span>FIND ME AROUND THE WEB</span>
-            <SocialLinks compact />
-            <small>More profile links coming soon.</small>
+            <SocialLinks compact hidePending />
           </div>
         </div>
         <div className="footer-bottom">

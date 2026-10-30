@@ -10,6 +10,8 @@ Social URLs are edited in site.json. Only real supplied URLs should become links
 
 ## Brand assets and themes
 
-Brand green is `#92C948`; brand navy is `#0B1D3A`. Shared theme tokens live in `src/styles/site.css`; logo URLs live in `src/content/branding.json`. The reusable BrandLogo component selects the supplied light/dark logo with CSS, avoiding a hydration flash. A light backing preserves the navy letter in the dark-theme artwork. Optimised transparent WebP files are used in navigation and footer; original PNGs are retained as source assets.
+Brand green is `#92C948`; brand navy is `#0B1D3A`. Shared theme tokens live in `src/styles/site.css`; logo URLs live in `src/content/branding.json`. The reusable BrandLogo component selects the supplied light/dark logo with CSS, avoiding a hydration flash. Logos have transparent backgrounds. Dark surfaces use a white treatment for legibility, without a backing badge. Optimised transparent WebP files are used in navigation and footer; original PNGs are retained as source assets.
 
 The blog editor, form states, illustrations, favicon and social preview use the same palette. Semantic error colours and recognisable third-party platform colours are retained. Run `python scripts/generate-social-image.py` to regenerate `public/og-image.png` from the original light logo (Pillow and URW Nimbus fonts required).
+
+The presentation refresh is defined in `src/styles/modern.css`, loaded after the shared layout CSS. It provides a compact floating navbar, active navigation pills, softer cards, updated typography, responsive spacing and transparent logos. Header and footer logo sizes are intentionally smaller on phones.

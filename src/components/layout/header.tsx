@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
@@ -10,18 +10,40 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
+  const header = useRef<HTMLElement>(null);
+  const active = (url: string) =>
+    url === "/"
+      ? pathname === "/"
+      : pathname === url || pathname.startsWith(url + "/");
+  useEffect(() => {
+    if (!open) return;
+    const outside = (event: PointerEvent) => {
+      if (!header.current?.contains(event.target as Node)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, [open]);
   return (
-    <header className="site-header">
+    <header
+      ref={header}
+      className="site-header"
+      onKeyDown={(e) => {
+        if (e.key === "Escape" && open) {
+          setOpen(false);
+          toggle.current?.focus();
+        }
+      }}
+    >
       <div className="container header-inner">
         <a href="/" className="brand" aria-label="Zainab Abdullah home">
           <BrandLogo />
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
-          {navigation.map(([label, url]) => (
+          {[["Home", "/"], ...navigation].map(([label, url]) => (
             <a
               key={url}
               href={url}
-              aria-current={pathname === url ? "page" : undefined}
+              aria-current={active(url) ? "page" : undefined}
             >
               {label}
             </a>
@@ -57,14 +79,17 @@ export function Header() {
           }}
         >
           {[
+            ["Home", "/"],
             ...navigation,
+            ["Markets", "/markets"],
             ["FAQs", "/faq"],
             ["Let’s talk growth", "/contact"],
           ].map(([label, url]) => (
             <a
               key={url}
               href={url}
-              aria-current={pathname === url ? "page" : undefined}
+              className={url === "/contact" ? "mobile-contact" : undefined}
+              aria-current={active(url) ? "page" : undefined}
               onClick={() => setOpen(false)}
             >
               {label}

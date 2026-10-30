@@ -6016,24 +6016,11 @@ textarea:focus-visible {
 
 .market-copy {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin:2rem 0}.market-copy p {line-height:1.8}.studio-access form {display:grid;gap:1rem;max-width:30rem}.studio-access label {display:grid;gap:.5rem}.studio-access input {padding:.8rem;background:var(--bg);color:inherit;border:1px solid currentColor;border-radius:.5rem}@media(max-width:700px){.market-copy{grid-template-columns:1fr}}
 
-/* Supplied brand assets: CSS switches the logo before hydration. */
-.brand-logo {display:block;position:relative;width:176px;aspect-ratio:640 / 225;flex-shrink:0}
+/* Supplied transparent logos; sizing and theme treatments are in modern.css. */
+.brand-logo {display:block;position:relative;aspect-ratio:640 / 225;flex-shrink:0}
 .brand-logo img {display:block;width:100%;height:100%;object-fit:contain}
 .brand-logo .brand-logo-dark {display:none}
 [data-theme="dark"] .brand-logo .brand-logo-light {display:none}
 [data-theme="dark"] .brand-logo .brand-logo-dark {display:block}
-[data-theme="dark"] .brand-logo {background:#edf3e5;border-radius:8px;padding:7px 9px;box-sizing:content-box}
-.footer-brand {display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.site-footer .brand-logo {width:210px;background:#edf3e5;border-radius:8px;padding:9px 12px;box-sizing:content-box}
 .site-footer .brand-logo .brand-logo-light {display:none}
 .site-footer .brand-logo .brand-logo-dark {display:block}
-.site-footer .footer-tagline {display:block;color:#b7c8de;font-size:11px;font-weight:400;letter-spacing:0}
-:root {--success-surface:#eaf4df;--success-ink:#42681e}
-.button {background:var(--brand-navy);border-color:var(--brand-navy);color:#fff}
-.button:hover {background:#203c62;border-color:#203c62}
-[data-theme="dark"] .button {background:var(--brand-green);border-color:var(--brand-green);color:var(--brand-navy)}
-[data-theme="dark"] .button:hover {background:#a8d66a;border-color:#a8d66a}
-:focus-visible {outline-color:var(--lime-dark)}
-.site-footer {background:var(--brand-navy)}
-@media(max-width:700px){.brand-logo{width:145px}.header-inner{gap:12px}.site-footer .brand-logo{width:180px}}
-@media(max-width:370px){.brand-logo{width:126px}.header-inner{gap:8px}}
