@@ -1,57 +1,62 @@
 {
-  "/assets/sample-female-portrait.webp": {
-    "width": 1122,
-    "height": 1402,
+  "/assets/zainab-abdullah-portrait.webp": {
+    "width": 1227,
+    "height": 1536,
     "variants": [
       {
         "width": 64,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.64.webp",
-        "bytes": 908
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.64.webp",
+        "bytes": 1028
       },
       {
         "width": 96,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.96.webp",
-        "bytes": 1522
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.96.webp",
+        "bytes": 1962
       },
       {
         "width": 128,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.128.webp",
-        "bytes": 2142
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.128.webp",
+        "bytes": 3150
       },
       {
         "width": 256,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.256.webp",
-        "bytes": 5168
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.256.webp",
+        "bytes": 9520
       },
       {
         "width": 320,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.320.webp",
-        "bytes": 6844
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.320.webp",
+        "bytes": 13990
       },
       {
         "width": 480,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.480.webp",
-        "bytes": 12122
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.480.webp",
+        "bytes": 26274
       },
       {
         "width": 640,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.640.webp",
-        "bytes": 17696
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.640.webp",
+        "bytes": 40970
       },
       {
         "width": 768,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.768.webp",
-        "bytes": 23534
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.768.webp",
+        "bytes": 53374
       },
       {
         "width": 960,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.960.webp",
-        "bytes": 31146
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.960.webp",
+        "bytes": 72894
       },
       {
         "width": 1122,
-        "src": "/assets/optimized/sample-female-portrait.7dce341b4e80.1122.webp",
-        "bytes": 46366
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.1122.webp",
+        "bytes": 88138
+      },
+      {
+        "width": 1227,
+        "src": "/assets/optimized/zainab-abdullah-portrait.66c9ff2a7d62.1227.webp",
+        "bytes": 121928
       }
     ]
   },

@@ -1,11 +1,11 @@
 {
   "primary": {
-    "src": "/assets/sample-female-portrait.webp",
-    "alt": "AI-generated sample portrait of a female professional; not Zainab Abdullah",
-    "width": 1122,
-    "height": 1402,
-    "sample": true,
-    "objectPosition": "center 28%"
+    "src": "/assets/zainab-abdullah-portrait.webp",
+    "alt": "Zainab Abdullah — digital marketing expert and business analyst",
+    "width": 1227,
+    "height": 1536,
+    "sample": false,
+    "objectPosition": "center 25%"
   },
   "secondary": {
     "src": "/assets/sample-female-office.webp",
