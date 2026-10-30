@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { SITE_URL, SITE_DESCRIPTION } from "@/lib/content/site";
 import "./globals.css";
 export const viewport: Viewport = {
@@ -76,7 +77,20 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          id="google-tag"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ECJMGJY90E"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ECJMGJY90E');`}
+        </Script>
+      </body>
     </html>
   );
 }
