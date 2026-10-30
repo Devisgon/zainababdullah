@@ -6,6 +6,8 @@ Add real portraits through media.json, then regenerate variants with `node scrip
 
 Daily posts: sign in at `/studio/blog` using an allowlisted Supabase Auth account. Save drafts, preview, set SEO fields and publish. Published URLs remain stable. Unpublishing a database article also suppresses any JSON article with the same slug. CMS data remains in Supabase and is not committed to Git.
 
+The eight Fiverr reviews in `reviews.json` are transcribed from owner-supplied screenshots. Preserve each buyer’s wording, username and rating; `bady_90` has two separate project reviews. Service labels describe the work mentioned in the feedback. The homepage shows excerpts and links to complete reviews on `/reviews`. The $500–$2,250 USD range on that page applies across the engagements, as stated by the owner; individual project amounts, review dates and buyer locations were not supplied. Add original review links only when provided. Ratings are displayed as content, without self-serving aggregate-rating structured data.
+
 Social URLs are edited in site.json. Only real supplied URLs should become links. The contact form requires email, international WhatsApp and contact consent. Notifications are not yet configured.
 
 ## Brand assets and themes

@@ -1,37 +1,72 @@
-import { ArrowUpRight, MessageSquare, Quote } from "lucide-react";
+import { ArrowUpRight, MessageSquare, Quote, Star } from "lucide-react";
 import { clientReviews } from "@/lib/content/trust";
 export function ReviewList({ limit }: { limit?: number }) {
   const items = limit ? clientReviews.slice(0, limit) : clientReviews;
   return items.length ? (
     <div className="reviews-grid">
-      {items.map((review) => (
-        <figure className="review-card" key={review.id}>
-          <div className="review-top">
-            <Quote size={23} />
-            <span
-              className={`market-badge market-${review.platform.toLowerCase()}`}
-            >
-              {review.platform}
-            </span>
-          </div>
-          <blockquote>{review.quote}</blockquote>
-          <figcaption>
-            <strong>{review.clientName}</strong>
-            {review.clientRole && <span>{review.clientRole}</span>}
-            {review.service && <small>{review.service}</small>}
-          </figcaption>
-          {review.sourceUrl && (
-            <a
-              className="text-link"
-              href={review.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the original review <ArrowUpRight size={14} />
-            </a>
-          )}
-        </figure>
-      ))}
+      {items.map((review) => {
+        const isPreview = limit !== undefined;
+        const firstParagraph = review.quote.split("\n\n")[0];
+        const preview =
+          firstParagraph.length > 280
+            ? `${firstParagraph.slice(0, 280).replace(/\s+\S*$/, "")}…`
+            : firstParagraph;
+        const quote = isPreview ? preview : review.quote;
+        return (
+          <figure className="review-card" id={review.id} key={review.id}>
+            <div className="review-top">
+              {review.rating !== undefined ? (
+                <div
+                  className="review-rating"
+                  aria-label={`${review.rating.toFixed(1)} out of 5 stars`}
+                >
+                  <span className="review-stars" aria-hidden="true">
+                    {Array.from({ length: 5 }, (_, index) => (
+                      <Star
+                        key={index}
+                        size={16}
+                        fill={index < review.rating! ? "currentColor" : "none"}
+                      />
+                    ))}
+                  </span>
+                  <strong aria-hidden="true">{review.rating.toFixed(1)}</strong>
+                </div>
+              ) : (
+                <Quote size={23} aria-hidden="true" />
+              )}
+              <span
+                className={`market-badge market-${review.platform.toLowerCase()}`}
+              >
+                {review.platform}
+              </span>
+            </div>
+            <blockquote>
+              {quote.split("\n\n").map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </blockquote>
+            <figcaption>
+              <strong>{review.clientName}</strong>
+              {review.clientRole && <span>{review.clientRole}</span>}
+              {review.service && <small>{review.service}</small>}
+            </figcaption>
+            {isPreview && quote !== review.quote ? (
+              <a className="text-link" href={`/reviews#${review.id}`}>
+                Read full review <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            ) : review.sourceUrl ? (
+              <a
+                className="text-link"
+                href={review.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the original review <ArrowUpRight size={14} />
+              </a>
+            ) : null}
+          </figure>
+        );
+      })}
     </div>
   ) : (
     <div className="review-pending-grid">

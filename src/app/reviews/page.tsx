@@ -4,7 +4,7 @@ import { clientReviews } from "@/lib/content/trust";
 import { pageMetadata } from "@/lib/seo/metadata";
 export const metadata = pageMetadata(
   "Client Reviews & Feedback",
-  "Client feedback on working with Zainab Abdullah, with source links where available.",
+  "Read eight 5-star Fiverr reviews of Zainab Abdullah’s business analysis, BPMN diagrams, system architecture, Figma wireframes and landing page design.",
   "/reviews",
   clientReviews.length > 0,
 );
@@ -13,12 +13,24 @@ export default function Reviews() {
     <PageShell>
       <PageIntro
         name="Client reviews"
-        eyebrow="FEEDBACK THAT BELONGS TO THE CLIENT"
+        eyebrow="CLIENT EXPERIENCES ON FIVERR"
         title="Good relationships."
         accent="Honest feedback."
-        description="A place for clients to describe the experience in their own words, with the original review source where available."
+        description="Client feedback on business analysis, process mapping, system architecture and Figma design, in their own words."
       />
       <section className="container reviews-section">
+        <div className="review-summary" aria-label="Review highlights">
+          <div>
+            <strong>{clientReviews.length} reviews</strong>
+            <span>Each rated 5.0 out of 5 on Fiverr</span>
+          </div>
+          <div>
+            <strong>
+              $500–$2,250 <small>USD</small>
+            </strong>
+            <span>Project values across these engagements</span>
+          </div>
+        </div>
         <ReviewList />
       </section>
       <section className="container review-context">

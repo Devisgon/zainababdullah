@@ -642,6 +642,106 @@ body {
   color: var(--muted);
   margin-top: 20px;
 }
+
+/* Client feedback stays readable in both themes, including longer reviews. */
+.review-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 26px 30px;
+  margin-bottom: 28px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+}
+.review-summary strong {
+  display: block;
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -0.8px;
+  line-height: 1.3;
+}
+.review-summary strong small {
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.review-summary span,
+.reviews-intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.review-summary span {
+  display: block;
+  margin-top: 7px;
+}
+.reviews-intro {
+  margin: -12px 0 26px;
+}
+.review-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  scroll-margin-top: 130px;
+}
+.review-top {
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.review-rating,
+.review-stars {
+  display: inline-flex;
+  align-items: center;
+}
+.review-rating {
+  gap: 10px;
+  font-size: 14px;
+}
+.review-stars {
+  gap: 3px;
+  color: var(--lime-dark);
+}
+[data-theme="dark"] .review-stars,
+[data-theme="dark"] .market-fiverr {
+  color: var(--brand-green);
+}
+.review-card blockquote {
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: -0.15px;
+}
+.review-card blockquote p + p {
+  margin-top: 18px;
+}
+.review-card figcaption {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.review-card figcaption strong {
+  font-size: 15px;
+}
+.review-card figcaption > small {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.review-card > .text-link {
+  align-self: flex-start;
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  .review-summary {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+  .review-card blockquote {
+    font-size: 17px;
+  }
+  .reviews-intro {
+    margin-top: 0;
+  }
+}
 @media (max-width: 700px) {
   .about-title-main {
     font-size: clamp(32px, 8.2vw, 45px);

@@ -34,14 +34,21 @@ const services = z.array(service).parse(read("services"));
 if (new Set(services.map((s) => s.slug)).size !== services.length)
   throw new Error("Duplicate service URL");
 z.array(z.tuple([nonempty, nonempty])).parse(read("faqs"));
-z.array(
-  z.object({
-    id: nonempty,
-    quote: nonempty,
-    clientName: nonempty,
-    platform: z.enum(["Fiverr", "Upwork", "Direct"]),
-  }),
-).parse(read("reviews"));
+const reviews = z
+  .array(
+    z.object({
+      id: nonempty,
+      quote: nonempty,
+      clientName: nonempty,
+      platform: z.enum(["Fiverr", "Upwork", "Direct"]),
+      rating: z.number().min(1).max(5).optional(),
+      service: nonempty.optional(),
+      sourceUrl: z.string().url().optional(),
+    }),
+  )
+  .parse(read("reviews"));
+if (new Set(reviews.map((review) => review.id)).size !== reviews.length)
+  throw new Error("Duplicate review ID");
 z.array(
   z.object({
     slug,

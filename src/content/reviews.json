@@ -1,1 +1,65 @@
-[]
+[
+  {
+    "id": "cjanyigbo-flowcharts",
+    "clientName": "cjanyigbo",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "Flowcharts & project management",
+    "quote": "Zainab was very quick with her responses and delivered my flowcharts ahead of time . Highly recommend working with her for all project management needs"
+  },
+  {
+    "id": "leotrsa-production-workflow",
+    "clientName": "leotrsa",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "Swimlane, BPMN & Miro diagrams",
+    "quote": "Zainab delivered an excellent Swimlane diagram and BPMN workflow for our project \"Production Lifecycle and Inventory Tracking.\" The Miro diagram on the Miro board was extremely clear, well-structured, and professionally organized.\n\nShe perfectly translated our documentation into detailed BPMN diagrams, including production phases, QA logic, and rejection flows. The Swimlane diagram clearly visualized the entire inventory net tracking process and overall system workflow.\n\nHighly recommended for anyone needing structured Swimlane, BPMN, or Miro board diagrams with great communication and timely delivery."
+  },
+  {
+    "id": "shar-234-figma-wireframes",
+    "clientName": "shar_234",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "Figma wireframes & UI/UX design",
+    "quote": "Zainabr029 was great to work with, very professional and clear in communication. She provided regular updates throughout the project and was always open to feedback. Her wireframing and Figma skills are strong, with a great sense of UI/UX structure, spacing, and color choices. The final design was clean, modern, and easy for my developer to implement. Highly recommended!"
+  },
+  {
+    "id": "devis-watson-landing-page",
+    "clientName": "devis_watson",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "Landing page design in Figma",
+    "quote": "She did an outstanding job designing my landing page in Figma. She has a great eye for UI/UX and clearly understands how to balance aesthetics with usability. I specifically requested a dark-mode landing page that looked clean and modern without being overdone, and she executed it perfectly.\n\nHer workflow was very professional she started with wireframes, shared regular progress, and provided daily updates throughout the project. She followed instructions carefully, communicated clearly, and delivered everything on time.\n\nIf you’re looking for someone skilled in landing page design, UI, UX, Figma, and wireframes, I highly recommend Zainab. Very efficient, professional, and easy to work with. I’d definitely work with her again."
+  },
+  {
+    "id": "two-deer-system-architecture",
+    "clientName": "two_deer",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "System architecture diagrams",
+    "quote": "Worked with Zainab on two detailed system architecture diagrams for our platform and HR systems. She understood the requirements quickly, translated complex workflows into clear visuals, and maintained great communication throughout. The final diagrams were professional, accurate, and exceeded expectations. Would definitely work with her again."
+  },
+  {
+    "id": "bady-90-database-architecture",
+    "clientName": "bady_90",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "Database, payment & authentication architecture",
+    "quote": "I’m extremely satisfied with the work. The database architectural diagram and the multi-gateway payment and authentication architecture were delivered perfectly and exceeded my expectations. Very professional and highly skilled in diagramming and infographics."
+  },
+  {
+    "id": "bady-90-business-process-modeling",
+    "clientName": "bady_90",
+    "platform": "Fiverr",
+    "rating": 5,
+    "service": "BPMN & swimlane process modeling",
+    "quote": "Working with Zainabr029 was a great experience. She took my existing process pdfs and turned them into professional, high-resolution BPMN and swimlane diagrams. The attention to detail in the workflow logic was impressive, and the delivery was very fast. If anyone needs clean and clear business process modeling, I highly recommend her services."
+  },
+  {
+    "id": "prime-xy-client-feedback",
+    "clientName": "Prime Xy",
+    "platform": "Fiverr",
+    "rating": 5,
+    "quote": "Exceptional work! The seller has updated me about the progress the whole time which I really appreciated. Great communication!\nLooking forward to working with this seller again!"
+  }
+]

@@ -1,6 +1,6 @@
 import { ArrowUpRight, Layers } from "lucide-react";
 import { ReviewList } from "@/features/reviews/components/review-list";
-import { workProjects } from "@/lib/content/trust";
+import { clientReviews, workProjects } from "@/lib/content/trust";
 export function TrustSections() {
   return (
     <section className="section container trust-section">
@@ -45,9 +45,18 @@ export function TrustSections() {
           </h2>
         </div>
         <a className="text-link" href="/reviews">
-          Client reviews <ArrowUpRight size={17} />
+          {clientReviews.length
+            ? `Read all ${clientReviews.length} reviews`
+            : "Client reviews"}{" "}
+          <ArrowUpRight size={17} />
         </a>
       </div>
+      {clientReviews.length > 0 && (
+        <p className="reviews-intro">
+          Fiverr client feedback on business analysis, process diagrams and
+          Figma design.
+        </p>
+      )}
       <ReviewList limit={2} />
     </section>
   );
