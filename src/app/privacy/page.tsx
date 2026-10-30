@@ -80,6 +80,20 @@ export default function Privacy() {
           preference is saved locally in your browser so it can be remembered
           between visits.
         </p>
+        <p>
+          We also use Microsoft Clarity to understand page interactions through
+          heatmaps and session recordings, including clicks, scrolling and
+          navigation. Clarity may use cookies and process device, browser and
+          page information. Learn more in{" "}
+          <a
+            href="https://privacy.microsoft.com/privacystatement"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Microsoft’s privacy statement
+          </a>
+          .
+        </p>
         <h2>Keeping and deleting an enquiry</h2>
         <p>
           Enquiry information is kept while it is needed to discuss the project
