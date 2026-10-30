@@ -5,15 +5,17 @@ export function Portrait({
   variant = "primary",
   priority = false,
   small = false,
+  landscape = false,
 }: {
   variant?: "primary" | "secondary";
   priority?: boolean;
   small?: boolean;
+  landscape?: boolean;
 }) {
   const asset = portraits[variant] || portraits.primary;
   return (
     <figure
-      className={`portrait-frame ${small ? "portrait-small" : ""} ${asset ? "has-portrait" : ""} ${asset?.sample ? "sample-portrait" : ""}`}
+      className={`portrait-frame ${landscape ? "portrait-landscape" : ""} ${small ? "portrait-small" : ""} ${asset ? "has-portrait" : ""} ${asset?.sample ? "sample-portrait" : ""}`}
     >
       {asset ? (
         <>

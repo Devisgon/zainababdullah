@@ -8,11 +8,11 @@
     "objectPosition": "center 25%"
   },
   "secondary": {
-    "src": "/assets/sample-female-office.webp",
-    "alt": "AI-generated sample image of a female professional working at a laptop; not Zainab Abdullah",
-    "width": 1440,
-    "height": 960,
-    "sample": true,
-    "objectPosition": "46% 28%"
+    "src": "/assets/zainab-abdullah-marketing-workspace.webp",
+    "alt": "Zainab Abdullah at her laptop with advertising platforms and growth graphics",
+    "width": 1536,
+    "height": 1024,
+    "sample": false,
+    "objectPosition": "center"
   }
 }

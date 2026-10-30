@@ -594,3 +594,22 @@ body {
     transform: none;
   }
 }
+
+/* Preserve the full supplied landscape composition and keep the caption below it. */
+.difference-grid > .portrait-frame.has-portrait.portrait-landscape {
+  aspect-ratio: auto;
+  align-self: center;
+}
+.portrait-frame.portrait-landscape > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+.portrait-frame.portrait-landscape figcaption {
+  position: static;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  padding: 18px 20px;
+}

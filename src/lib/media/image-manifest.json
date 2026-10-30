@@ -60,64 +60,69 @@
       }
     ]
   },
-  "/assets/sample-female-office.webp": {
-    "width": 1440,
-    "height": 960,
+  "/assets/zainab-abdullah-marketing-workspace.webp": {
+    "width": 1536,
+    "height": 1024,
     "variants": [
       {
         "width": 64,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.64.webp",
-        "bytes": 1042
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.64.webp",
+        "bytes": 1164
       },
       {
         "width": 96,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.96.webp",
-        "bytes": 1886
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.96.webp",
+        "bytes": 2110
       },
       {
         "width": 128,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.128.webp",
-        "bytes": 2790
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.128.webp",
+        "bytes": 3232
       },
       {
         "width": 256,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.256.webp",
-        "bytes": 7096
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.256.webp",
+        "bytes": 8676
       },
       {
         "width": 320,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.320.webp",
-        "bytes": 9248
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.320.webp",
+        "bytes": 11676
       },
       {
         "width": 480,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.480.webp",
-        "bytes": 15144
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.480.webp",
+        "bytes": 19586
       },
       {
         "width": 640,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.640.webp",
-        "bytes": 21224
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.640.webp",
+        "bytes": 28368
       },
       {
         "width": 768,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.768.webp",
-        "bytes": 26460
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.768.webp",
+        "bytes": 37102
       },
       {
         "width": 960,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.960.webp",
-        "bytes": 33970
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.960.webp",
+        "bytes": 46538
       },
       {
         "width": 1122,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.1122.webp",
-        "bytes": 39594
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.1122.webp",
+        "bytes": 56826
       },
       {
         "width": 1440,
-        "src": "/assets/optimized/sample-female-office.f2499c6a521e.1440.webp",
-        "bytes": 58680
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.1440.webp",
+        "bytes": 73092
+      },
+      {
+        "width": 1536,
+        "src": "/assets/optimized/zainab-abdullah-marketing-workspace.25ae3cf7dfce.1536.webp",
+        "bytes": 88668
       }
     ]
   }

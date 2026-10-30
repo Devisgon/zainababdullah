@@ -6,7 +6,7 @@ export function AboutSection() {
   return (
     <section className="difference-section" id="about">
       <div className="container difference-grid">
-        <Portrait variant="secondary" />
+        <Portrait variant="secondary" landscape />
         <div className="difference-copy">
           <span className="eyebrow">
             <span className="section-number">02 /</span>THE PERSON BEHIND THE
