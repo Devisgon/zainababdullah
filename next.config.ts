@@ -58,6 +58,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/why-professional-looking-content-may-be-performing-worse",
         permanent: true,
       },
+      {
+        source: "/social-media-posts-get-views-but-no-customers",
+        destination: "/blog/social-media-posts-get-views-but-no-customers",
+        permanent: true,
+      },
     ];
   },
   async headers() {
