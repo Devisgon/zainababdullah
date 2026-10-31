@@ -58,5 +58,35 @@
     "width": 1200,
     "height": 800,
     "srcSet": "/assets/blog/email-crm-customer-relationships-640.webp 640w, /assets/blog/email-crm-customer-relationships.webp 1200w"
+  },
+  "/assets/blog/how-to-create-social-media-strategy-2026-zainab-abdullah-devisgon.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/how-to-create-social-media-strategy-2026-zainab-abdullah-devisgon-640.webp 640w, /assets/blog/how-to-create-social-media-strategy-2026-zainab-abdullah-devisgon.webp 1200w"
+  },
+  "/assets/blog/social-media-content-pillars-platforms.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/social-media-content-pillars-platforms-640.webp 640w, /assets/blog/social-media-content-pillars-platforms.webp 1200w"
+  },
+  "/assets/blog/social-media-strategy-review-optimization.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/social-media-strategy-review-optimization-640.webp 640w, /assets/blog/social-media-strategy-review-optimization.webp 1200w"
+  },
+  "/assets/blog/instagram-reach-dropping.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/instagram-reach-dropping-640.webp 640w, /assets/blog/instagram-reach-dropping.webp 1200w"
+  },
+  "/assets/blog/instagram-reels-hooks-audience-relevance.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/instagram-reels-hooks-audience-relevance-640.webp 640w, /assets/blog/instagram-reels-hooks-audience-relevance.webp 1200w"
+  },
+  "/assets/blog/instagram-content-performance-review.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/instagram-content-performance-review-640.webp 640w, /assets/blog/instagram-content-performance-review.webp 1200w"
   }
 }

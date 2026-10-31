@@ -824,6 +824,13 @@ body {
   padding: 0;
   list-style: none;
 }
+.article-prose .article-workflow[data-step-count="5"] ol,
+.article-prose .article-workflow[data-step-count="8"] ol {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.article-prose .article-workflow[data-step-count="5"] li:last-child {
+  grid-column: 1 / -1;
+}
 .article-prose .article-workflow li {
   display: flex;
   flex-direction: column;
@@ -916,7 +923,9 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .article-prose .article-workflow ol {
+  .article-prose .article-workflow ol,
+  .article-prose .article-workflow[data-step-count="5"] ol,
+  .article-prose .article-workflow[data-step-count="8"] ol {
     grid-template-columns: 1fr;
   }
 }

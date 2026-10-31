@@ -33,6 +33,16 @@ const nextConfig: NextConfig = {
         destination: "/blog/what-is-digital-marketing",
         permanent: true,
       },
+      {
+        source: "/how-to-create-social-media-strategy-2026",
+        destination: "/blog/how-to-create-social-media-strategy-2026",
+        permanent: true,
+      },
+      {
+        source: "/instagram-reach-dropping-despite-consistent-posting",
+        destination: "/blog/instagram-reach-dropping-despite-consistent-posting",
+        permanent: true,
+      },
     ];
   },
   async headers() {
