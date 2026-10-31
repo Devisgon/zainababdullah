@@ -17,3 +17,7 @@ Brand green is `#92C948`; brand navy is `#0B1D3A`. Shared theme tokens live in `
 The blog editor, form states, illustrations, favicon and social preview use the same palette. Semantic error colours and recognisable third-party platform colours are retained. The owner-supplied default social preview is `public/og-zainab-abdullah.jpg`; its actual dimensions, MIME type and alt text are configured in `src/content/seo.json`. Shared Open Graph and Twitter metadata use this image. Articles with a cover use that cover for their own previews. The legacy social-card generator does not overwrite this supplied image.
 
 The presentation refresh is defined in `src/styles/modern.css`, loaded after the shared layout CSS. It provides a compact floating navbar, active navigation pills, softer cards, updated typography, responsive spacing and transparent logos. Header and footer logo sizes are intentionally smaller on phones.
+
+## Article illustrations and workflows
+
+The social media growth article is published through `src/content/blog.json`. Its cover is also its Open Graph and Twitter image. Generated editorial illustrations are served as compressed WebP assets with smaller mobile variants, dimensions and source sets in `src/content/blog-images.json`. Keep only final web assets in Git. The `growth-workflow` Markdown fence renders an accessible numbered workflow with editable text. Ordinary code blocks and Markdown HTML sanitization keep their existing behavior. The short root URL redirects permanently to the canonical `/blog/` article URL.

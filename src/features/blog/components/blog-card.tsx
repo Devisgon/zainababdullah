@@ -1,5 +1,6 @@
 import { ArrowUpRight, FileText } from "lucide-react";
 import { articleDate, type BlogSummary } from "@/features/blog/schema";
+import { BlogImage } from "./blog-image";
 export function BlogCard({ post }: { post: BlogSummary }) {
   return (
     <article className="blog-card">
@@ -9,11 +10,10 @@ export function BlogCard({ post }: { post: BlogSummary }) {
         aria-label={`Read ${post.title}`}
       >
         {post.coverImage ? (
-          <img
+          <BlogImage
             src={post.coverImage}
             alt={post.coverAlt}
-            loading="lazy"
-            decoding="async"
+            sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 380px"
           />
         ) : (
           <>

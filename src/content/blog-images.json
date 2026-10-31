@@ -1,0 +1,17 @@
+{
+  "/assets/blog/small-business-social-media-2026.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/small-business-social-media-2026-640.webp 640w, /assets/blog/small-business-social-media-2026.webp 1200w"
+  },
+  "/assets/blog/social-media-content-planning.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/social-media-content-planning-640.webp 640w, /assets/blog/social-media-content-planning.webp 1200w"
+  },
+  "/assets/blog/social-media-business-results.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/social-media-business-results-640.webp 640w, /assets/blog/social-media-business-results.webp 1200w"
+  }
+}

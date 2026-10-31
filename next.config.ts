@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
     imageSizes: [64, 96, 128, 256],
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/how-to-grow-small-business-on-social-media",
+        destination: "/blog/how-to-grow-small-business-on-social-media",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

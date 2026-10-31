@@ -10,6 +10,10 @@ import {
 import { articleDate, readingMinutes } from "@/features/blog/schema";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { SITE_URL } from "@/lib/content/site";
+import {
+  BlogImage,
+  blogImageAsset,
+} from "@/features/blog/components/blog-image";
 export const revalidate = 60;
 export const dynamic = "force-static";
 export const dynamicParams = true;
@@ -30,10 +34,17 @@ export async function generateMetadata({ params }: Props) {
     post.metaDescription || post.excerpt,
     `/blog/${post.slug}`,
   );
+  const title = post.metaTitle || post.title;
+  const cover = blogImageAsset(post.coverImage);
+  const coverUrl = post.coverImage
+    ? new URL(post.coverImage, SITE_URL).toString()
+    : undefined;
   return {
     ...meta,
+    title,
     twitter: {
       ...meta.twitter,
+      title,
       ...(post.coverImage
         ? {
             images: [
@@ -47,12 +58,27 @@ export async function generateMetadata({ params }: Props) {
     },
     openGraph: {
       ...meta.openGraph,
+      title,
       type: "article",
       publishedTime: new Date(post.publishedAt!).toISOString(),
       modifiedTime: new Date(post.updatedAt).toISOString(),
       authors: ["Zainab Abdullah"],
       ...(post.coverImage
-        ? { images: [{ url: post.coverImage, alt: post.coverAlt }] }
+        ? {
+            images: [
+              {
+                url: coverUrl!,
+                alt: post.coverAlt,
+                ...(cover
+                  ? {
+                      width: cover.width,
+                      height: cover.height,
+                      type: "image/webp",
+                    }
+                  : {}),
+              },
+            ],
+          }
         : {}),
     },
   };
@@ -84,6 +110,27 @@ export default async function Article({ params }: Props) {
   return (
     <PageShell>
       <JsonLd data={schema} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: SITE_URL + "/blog",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: post.title,
+              item: SITE_URL + "/blog/" + post.slug,
+            },
+          ],
+        }}
+      />
       <article className="container blog-article">
         <nav className="breadcrumbs" aria-label="Breadcrumb">
           <a href="/">Home</a>
@@ -114,7 +161,7 @@ export default async function Article({ params }: Props) {
         </div>
         {post.coverImage && (
           <figure className="article-cover">
-            <img src={post.coverImage} alt={post.coverAlt} decoding="async" />
+            <BlogImage src={post.coverImage} alt={post.coverAlt} priority />
           </figure>
         )}
         <MarkdownContent content={post.content} />
