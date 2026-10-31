@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/how-to-grow-small-business-on-social-media",
         permanent: true,
       },
+      {
+        source: "/7-types-of-content-every-business-should-post",
+        destination: "/blog/7-types-of-content-every-business-should-post",
+        permanent: true,
+      },
     ];
   },
   async headers() {
