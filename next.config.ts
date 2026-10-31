@@ -48,6 +48,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/why-meta-ads-suddenly-stopped-working",
         permanent: true,
       },
+      {
+        source: "/your-followers-are-not-your-reach-anymore",
+        destination: "/blog/your-followers-are-not-your-reach-anymore",
+        permanent: true,
+      },
     ];
   },
   async headers() {
