@@ -270,6 +270,22 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(11, 29, 58, 0.075);
 }
+.blog-card {
+  display: flex;
+  flex-direction: column;
+}
+.blog-card-image {
+  flex-shrink: 0;
+}
+.blog-card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.blog-card-copy > .text-link {
+  align-self: flex-start;
+  margin-top: auto;
+}
 .related-links a,
 .work-filters button,
 .blog-search-input,
