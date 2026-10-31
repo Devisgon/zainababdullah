@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/7-types-of-content-every-business-should-post",
         permanent: true,
       },
+      {
+        source: "/social-media-marketing-mistakes",
+        destination: "/blog/social-media-marketing-mistakes",
+        permanent: true,
+      },
     ];
   },
   async headers() {
