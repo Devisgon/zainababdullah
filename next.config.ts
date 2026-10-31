@@ -53,6 +53,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/your-followers-are-not-your-reach-anymore",
         permanent: true,
       },
+      {
+        source: "/why-professional-looking-content-may-be-performing-worse",
+        destination: "/blog/why-professional-looking-content-may-be-performing-worse",
+        permanent: true,
+      },
     ];
   },
   async headers() {
