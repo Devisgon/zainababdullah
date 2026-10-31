@@ -28,6 +28,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/social-media-marketing-mistakes",
         permanent: true,
       },
+      {
+        source: "/what-is-digital-marketing",
+        destination: "/blog/what-is-digital-marketing",
+        permanent: true,
+      },
     ];
   },
   async headers() {
