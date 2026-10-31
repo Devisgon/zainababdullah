@@ -43,6 +43,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/instagram-reach-dropping-despite-consistent-posting",
         permanent: true,
       },
+      {
+        source: "/why-meta-ads-suddenly-stopped-working",
+        destination: "/blog/why-meta-ads-suddenly-stopped-working",
+        permanent: true,
+      },
     ];
   },
   async headers() {
