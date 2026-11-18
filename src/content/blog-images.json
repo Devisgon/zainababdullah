@@ -178,5 +178,50 @@
     "width": 1200,
     "height": 800,
     "srcSet": "/assets/blog/chatgpt-ads-prelaunch-checklist-640.webp 640w, /assets/blog/chatgpt-ads-prelaunch-checklist.webp 1200w"
+  },
+  "/assets/blog/angi-chatgpt-ads-hvac-case-study.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/angi-chatgpt-ads-hvac-case-study-640.webp 640w, /assets/blog/angi-chatgpt-ads-hvac-case-study.webp 1200w"
+  },
+  "/assets/blog/hvac-ads-local-service-area.webp": {
+    "width": 1200,
+    "height": 360,
+    "srcSet": "/assets/blog/hvac-ads-local-service-area-640.webp 640w, /assets/blog/hvac-ads-local-service-area.webp 1200w"
+  },
+  "/assets/blog/hvac-ads-booked-job-tracking.webp": {
+    "width": 1200,
+    "height": 360,
+    "srcSet": "/assets/blog/hvac-ads-booked-job-tracking-640.webp 640w, /assets/blog/hvac-ads-booked-job-tracking.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-organic-ai-recommendations.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/chatgpt-ads-organic-ai-recommendations-640.webp 640w, /assets/blog/chatgpt-ads-organic-ai-recommendations.webp 1200w"
+  },
+  "/assets/blog/chatgpt-sponsored-ads-organic-discovery.webp": {
+    "width": 1200,
+    "height": 360,
+    "srcSet": "/assets/blog/chatgpt-sponsored-ads-organic-discovery-640.webp 640w, /assets/blog/chatgpt-sponsored-ads-organic-discovery.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-qualified-lead-measurement.webp": {
+    "width": 1200,
+    "height": 360,
+    "srcSet": "/assets/blog/chatgpt-ads-qualified-lead-measurement-640.webp 640w, /assets/blog/chatgpt-ads-qualified-lead-measurement.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-plumbing-context-hints.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/chatgpt-ads-plumbing-context-hints-640.webp 640w, /assets/blog/chatgpt-ads-plumbing-context-hints.webp 1200w"
+  },
+  "/assets/blog/emergency-plumbing-ad-context-hints.webp": {
+    "width": 1200,
+    "height": 360,
+    "srcSet": "/assets/blog/emergency-plumbing-ad-context-hints-640.webp 640w, /assets/blog/emergency-plumbing-ad-context-hints.webp 1200w"
+  },
+  "/assets/blog/planned-plumbing-maintenance-ad-context-hints.webp": {
+    "width": 1200,
+    "height": 360,
+    "srcSet": "/assets/blog/planned-plumbing-maintenance-ad-context-hints-640.webp 640w, /assets/blog/planned-plumbing-maintenance-ad-context-hints.webp 1200w"
   }
 }
