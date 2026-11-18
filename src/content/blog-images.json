@@ -148,5 +148,35 @@
     "width": 1200,
     "height": 800,
     "srcSet": "/assets/blog/clear-next-step-social-media-conversion-640.webp 640w, /assets/blog/clear-next-step-social-media-conversion.webp 1200w"
+  },
+  "/assets/blog/chatgpt-gemini-claude-ai-advertising.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/chatgpt-gemini-claude-ai-advertising-640.webp 640w, /assets/blog/chatgpt-gemini-claude-ai-advertising.webp 1200w"
+  },
+  "/assets/blog/paid-ai-ads-organic-visibility.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/paid-ai-ads-organic-visibility-640.webp 640w, /assets/blog/paid-ai-ads-organic-visibility.webp 1200w"
+  },
+  "/assets/blog/ai-advertising-campaign-measurement.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/ai-advertising-campaign-measurement-640.webp 640w, /assets/blog/ai-advertising-campaign-measurement.webp 1200w"
+  },
+  "/assets/blog/how-to-set-up-chatgpt-ads.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/how-to-set-up-chatgpt-ads-640.webp 640w, /assets/blog/how-to-set-up-chatgpt-ads.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-test-budget.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/chatgpt-ads-test-budget-640.webp 640w, /assets/blog/chatgpt-ads-test-budget.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-prelaunch-checklist.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/chatgpt-ads-prelaunch-checklist-640.webp 640w, /assets/blog/chatgpt-ads-prelaunch-checklist.webp 1200w"
   }
 }
