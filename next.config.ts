@@ -63,6 +63,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/social-media-posts-get-views-but-no-customers",
         permanent: true,
       },
+      {
+        source: "/can-dentists-advertise-on-chatgpt",
+        destination: "/blog/can-dentists-advertise-on-chatgpt",
+        permanent: true,
+      },
     ];
   },
   async headers() {
