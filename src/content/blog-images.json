@@ -268,5 +268,35 @@
     "width": 1200,
     "height": 320,
     "srcSet": "/assets/blog/chatgpt-ads-cost-per-booked-job-640.webp 640w, /assets/blog/chatgpt-ads-cost-per-booked-job.webp 1200w"
+  },
+  "/assets/blog/ev-charger-installation-landing-page.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/ev-charger-installation-landing-page-640.webp 640w, /assets/blog/ev-charger-installation-landing-page.webp 1200w"
+  },
+  "/assets/blog/ev-charger-installation-quote-form.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/ev-charger-installation-quote-form-640.webp 640w, /assets/blog/ev-charger-installation-quote-form.webp 1200w"
+  },
+  "/assets/blog/ev-charger-installation-booking-tracking.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/ev-charger-installation-booking-tracking-640.webp 640w, /assets/blog/ev-charger-installation-booking-tracking.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-for-local-businesses.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/chatgpt-ads-for-local-businesses-640.webp 640w, /assets/blog/chatgpt-ads-for-local-businesses.webp 1200w"
+  },
+  "/assets/blog/protect-google-ads-test-budget.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/protect-google-ads-test-budget-640.webp 640w, /assets/blog/protect-google-ads-test-budget.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-incremental-booked-jobs.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/chatgpt-ads-incremental-booked-jobs-640.webp 640w, /assets/blog/chatgpt-ads-incremental-booked-jobs.webp 1200w"
   }
 }
