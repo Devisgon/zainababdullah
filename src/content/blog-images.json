@@ -238,5 +238,35 @@
     "width": 1200,
     "height": 320,
     "srcSet": "/assets/blog/dental-advertising-confirmed-appointments-640.webp 640w, /assets/blog/dental-advertising-confirmed-appointments.webp 1200w"
+  },
+  "/assets/blog/hvac-buyers-ai-questions-before-quote.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/hvac-buyers-ai-questions-before-quote-640.webp 640w, /assets/blog/hvac-buyers-ai-questions-before-quote.webp 1200w"
+  },
+  "/assets/blog/hvac-ac-repair-vs-replacement.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/hvac-ac-repair-vs-replacement-640.webp 640w, /assets/blog/hvac-ac-repair-vs-replacement.webp 1200w"
+  },
+  "/assets/blog/hvac-technician-appointment-booking.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/hvac-technician-appointment-booking-640.webp 640w, /assets/blog/hvac-technician-appointment-booking.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-conversion-tracking.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/chatgpt-ads-conversion-tracking-640.webp 640w, /assets/blog/chatgpt-ads-conversion-tracking.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-crm-campaign-attribution.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/chatgpt-ads-crm-campaign-attribution-640.webp 640w, /assets/blog/chatgpt-ads-crm-campaign-attribution.webp 1200w"
+  },
+  "/assets/blog/chatgpt-ads-cost-per-booked-job.webp": {
+    "width": 1200,
+    "height": 320,
+    "srcSet": "/assets/blog/chatgpt-ads-cost-per-booked-job-640.webp 640w, /assets/blog/chatgpt-ads-cost-per-booked-job.webp 1200w"
   }
 }

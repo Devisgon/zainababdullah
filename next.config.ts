@@ -68,6 +68,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/can-dentists-advertise-on-chatgpt",
         permanent: true,
       },
+      {
+        source: "/measure-chatgpt-ads-click-to-booked-job",
+        destination: "/blog/measure-chatgpt-ads-click-to-booked-job",
+        permanent: true,
+      },
     ];
   },
   async headers() {
