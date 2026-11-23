@@ -78,6 +78,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/meta-ads-leads-but-no-sales",
         permanent: true,
       },
+      {
+        source: "/mobile-form-errors-paid-ads-lost-leads",
+        destination: "/blog/mobile-form-errors-paid-ads-lost-leads",
+        permanent: true,
+      },
     ];
   },
   async headers() {
