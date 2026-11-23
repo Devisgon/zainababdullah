@@ -73,6 +73,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/measure-chatgpt-ads-click-to-booked-job",
         permanent: true,
       },
+      {
+        source: "/meta-ads-leads-but-no-sales",
+        destination: "/blog/meta-ads-leads-but-no-sales",
+        permanent: true,
+      },
     ];
   },
   async headers() {
