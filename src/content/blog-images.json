@@ -403,5 +403,15 @@
     "width": 1200,
     "height": 630,
     "srcSet": "/assets/blog/meta-ads-budget-increase-cpa-scaling-640.webp 640w, /assets/blog/meta-ads-budget-increase-cpa-scaling.webp 1200w"
+  },
+  "/assets/blog/creative-testing-for-paid-ads.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/creative-testing-for-paid-ads-640.webp 640w, /assets/blog/creative-testing-for-paid-ads.webp 1200w"
+  },
+  "/assets/blog/performance-max-existing-demand-roas-incrementality.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/performance-max-existing-demand-roas-incrementality-640.webp 640w, /assets/blog/performance-max-existing-demand-roas-incrementality.webp 1200w"
   }
 }

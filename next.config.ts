@@ -98,6 +98,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/meta-ads-budget-increase-cpa-scaling",
         permanent: true,
       },
+      {
+        source: "/performance-max-existing-demand-roas-incrementality",
+        destination: "/blog/performance-max-existing-demand-roas-incrementality",
+        permanent: true,
+      },
     ];
   },
   async headers() {
