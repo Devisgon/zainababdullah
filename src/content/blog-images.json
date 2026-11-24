@@ -413,5 +413,35 @@
     "width": 1200,
     "height": 630,
     "srcSet": "/assets/blog/performance-max-existing-demand-roas-incrementality-640.webp 640w, /assets/blog/performance-max-existing-demand-roas-incrementality.webp 1200w"
+  },
+  "/assets/blog/creative-testing-letterpress-proofs.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/creative-testing-letterpress-proofs-640.webp 640w, /assets/blog/creative-testing-letterpress-proofs.webp 1200w"
+  },
+  "/assets/blog/creative-test-change-one-variable.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/creative-test-change-one-variable-640.webp 640w, /assets/blog/creative-test-change-one-variable.webp 1200w"
+  },
+  "/assets/blog/creative-test-count-qualified-leads.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/creative-test-count-qualified-leads-640.webp 640w, /assets/blog/creative-test-count-qualified-leads.webp 1200w"
+  },
+  "/assets/blog/performance-max-existing-demand-storefront.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/performance-max-existing-demand-storefront-640.webp 640w, /assets/blog/performance-max-existing-demand-storefront.webp 1200w"
+  },
+  "/assets/blog/performance-max-sale-attribution.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/performance-max-sale-attribution-640.webp 640w, /assets/blog/performance-max-sale-attribution.webp 1200w"
+  },
+  "/assets/blog/performance-max-sales-control.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/performance-max-sales-control-640.webp 640w, /assets/blog/performance-max-sales-control.webp 1200w"
   }
 }
