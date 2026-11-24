@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props) {
     : undefined;
   return {
     ...meta,
+    ...("keywords" in post && Array.isArray(post.keywords) ? { keywords: post.keywords } : {}),
     title,
     twitter: {
       ...meta.twitter,

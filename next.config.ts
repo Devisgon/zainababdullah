@@ -83,6 +83,21 @@ const nextConfig: NextConfig = {
         destination: "/blog/mobile-form-errors-paid-ads-lost-leads",
         permanent: true,
       },
+      {
+        source: "/google-ads-search-terms-wasted-budget",
+        destination: "/blog/google-ads-search-terms-wasted-budget",
+        permanent: true,
+      },
+      {
+        source: "/why-cheaper-leads-increase-customer-acquisition-cost",
+        destination: "/blog/why-cheaper-leads-increase-customer-acquisition-cost",
+        permanent: true,
+      },
+      {
+        source: "/meta-ads-budget-increase-cpa-scaling",
+        destination: "/blog/meta-ads-budget-increase-cpa-scaling",
+        permanent: true,
+      },
     ];
   },
   async headers() {

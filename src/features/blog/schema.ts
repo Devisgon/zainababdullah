@@ -12,6 +12,7 @@ export type BlogPost = {
   status: "draft" | "published";
   coverImage: string;
   coverAlt: string;
+  keywords?: string[];
   metaTitle: string;
   metaDescription: string;
   author: string;
