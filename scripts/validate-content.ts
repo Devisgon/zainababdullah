@@ -81,6 +81,7 @@ const record = blogInputSchema
   .omit({ expectedUpdatedAt: true })
   .extend({
     id: z.string().uuid(),
+    keywords: z.array(nonempty).optional(),
     author: nonempty,
     createdAt: z.number().int().positive(),
     updatedAt: z.number().int().positive(),
@@ -88,7 +89,7 @@ const record = blogInputSchema
   });
 const posts = z.array(record).parse(read("blog"));
 for (const post of posts) {
-  const { author, createdAt, updatedAt, publishedAt, ...input } = post;
+  const { author, keywords, createdAt, updatedAt, publishedAt, ...input } = post;
   blogInputSchema.parse(input);
   if (post.status === "published" && !post.publishedAt)
     throw new Error("Published articles need a publication date");
