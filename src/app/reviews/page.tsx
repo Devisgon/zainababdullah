@@ -12,6 +12,7 @@ export default function Reviews() {
   return (
     <PageShell>
       <PageIntro
+        path="/reviews"
         name="Client reviews"
         eyebrow="CLIENT EXPERIENCES ON FIVERR"
         title="Good relationships."

@@ -6,6 +6,7 @@ import { MarkdownContent } from "@/features/blog/components/markdown-content";
 import {
   getPublishedPost,
   publishedSlugs,
+  listBlogPosts,
 } from "@/features/blog/server/repository";
 import { articleDate, readingMinutes } from "@/features/blog/schema";
 import { pageMetadata } from "@/lib/seo/metadata";
@@ -88,6 +89,8 @@ export default async function Article({ params }: Props) {
   const { slug } = await params;
   const post = await getPublishedPost(slug);
   if (!post) notFound();
+  const { posts } = await listBlogPosts({ category: post.category, limit: 4 });
+  const related = posts.filter((article) => article.slug !== post.slug).slice(0, 3);
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -138,7 +141,7 @@ export default async function Article({ params }: Props) {
           <span>/</span>
           <a href="/blog">Blog</a>
           <span>/</span>
-          <span aria-current="page">{post.category}</span>
+          <span aria-current="page">{post.title}</span>
         </nav>
         <span className="eyebrow">{post.category.toUpperCase()}</span>
         <h1>{post.title}</h1>
@@ -166,6 +169,16 @@ export default async function Article({ params }: Props) {
           </figure>
         )}
         <MarkdownContent content={post.content} />
+        {related.length > 0 && (
+          <section className="article-prose" aria-labelledby="related-articles">
+            <h2 id="related-articles">More on {post.category}</h2>
+            <ul>
+              {related.map((article) => (
+                <li key={article.slug}><a href={`/blog/${article.slug}`}>{article.title}</a></li>
+              ))}
+            </ul>
+          </section>
+        )}
         <div className="article-end">
           <a href="/blog" className="text-link">
             <ArrowLeft size={16} />

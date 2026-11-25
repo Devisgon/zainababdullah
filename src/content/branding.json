@@ -4,9 +4,9 @@
     "navy": "#0B1D3A"
   },
   "logo": {
-    "light": "/assets/brand/logo-light.webp",
-    "dark": "/assets/brand/logo-dark-colour.webp",
-    "width": 640,
-    "height": 225
+    "light": "/assets/brand/zainab-abdullah-logo-light.webp",
+    "dark": "/assets/brand/zainab-abdullah-logo-dark.webp",
+    "width": 384,
+    "height": 135
   }
 }

@@ -38,6 +38,7 @@ export default function FAQ() {
     <PageShell>
       <JsonLd data={schema} />
       <PageIntro
+        path="/faq"
         name="FAQs"
         eyebrow="A LITTLE CLARITY BEFORE WE BEGIN"
         title="Good questions."

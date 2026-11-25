@@ -25,6 +25,7 @@ export default function ServicesPage() {
     <PageShell>
       <JsonLd data={schema} />
       <PageIntro
+        path="/services"
         name="Services"
         eyebrow="HOW I CAN HELP"
         title="The right support."

@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/favicon.svg", destination: "/zainab-abdullah-favicon.webp", permanent: true },
+      { source: "/assets/brand/logo-light.webp", destination: "/assets/brand/zainab-abdullah-logo-light.webp", permanent: true },
+      { source: "/assets/brand/logo-dark-colour.webp", destination: "/assets/brand/zainab-abdullah-logo-dark.webp", permanent: true },
+      { source: "/assets/brand/logo-dark.png", destination: "/assets/brand/zainab-abdullah-logo-dark-original.webp", permanent: true },
+      { source: "/assets/brand/logo-light.png", destination: "/assets/brand/zainab-abdullah-logo-light-original.webp", permanent: true },
+      { source: "/og-image.png", destination: "/zainab-abdullah-growth-strategy.webp", permanent: true },
+      { source: "/og-zainab-abdullah.jpg", destination: "/zainab-abdullah-paid-advertising-social-preview.webp", permanent: true },
+
       {
         source: "/how-to-grow-small-business-on-social-media",
         destination: "/blog/how-to-grow-small-business-on-social-media",

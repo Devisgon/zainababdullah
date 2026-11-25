@@ -12,6 +12,7 @@ export default function Work() {
   return (
     <PageShell>
       <PageIntro
+        path="/work"
         name="My work"
         eyebrow="THE THINKING BEHIND THE DELIVERABLE"
         title="My work."

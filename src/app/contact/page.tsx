@@ -1,3 +1,4 @@
+import { SectionBreadcrumb } from "@/components/seo/section-breadcrumb";
 import { Check } from "lucide-react";
 import { PageShell } from "@/components/layout/page-shell";
 import { LeadForm } from "@/features/leads/components/lead-form";
@@ -14,11 +15,7 @@ export default function Contact() {
     <PageShell>
       <section className="contact-hero">
         <div className="container">
-          <nav className="breadcrumbs" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <span>/</span>
-            <span>Contact</span>
-          </nav>
+          <SectionBreadcrumb name="Contact" path="/contact" />
           <div className="contact-grid">
             <div className="contact-copy">
               <span className="eyebrow">LET’S FIND YOUR NEXT CLEAR STEP</span>
@@ -55,7 +52,7 @@ export default function Contact() {
                 <SocialLinks />
               </div>
             </div>
-            <LeadForm />
+            <LeadForm heading="h2" />
           </div>
         </div>
       </section>

@@ -71,7 +71,7 @@ function createRequestId() {
   );
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
-export function LeadForm() {
+export function LeadForm({ heading: Heading = "h3" }: { heading?: "h2" | "h3" }) {
   const [step, setStep] = useState(0),
     [draft, setDraft] = useState<Draft>(initial),
     [errors, setErrors] = useState<Record<string, string>>({}),
@@ -290,11 +290,11 @@ export function LeadForm() {
             <CheckCircle2 size={38} />
           </div>
           <span className="eyebrow">BRIEF RECEIVED</span>
-          <h3>
+          <Heading>
             A smarter next move
             <br />
             starts right here.
-          </h3>
+          </Heading>
           <p>
             Thanks, {draft.name.split(" ")[0]}. Your project brief has been
             saved. Zainab can review your goals and continue the conversation at{" "}
@@ -344,7 +344,7 @@ export function LeadForm() {
               <span key={i} className={i <= step ? "filled" : ""} />
             ))}
           </div>
-          <h3>{titles[step]}</h3>
+          <Heading>{titles[step]}</Heading>
           <p className="form-hint">{hints[step]}</p>
           <div className="form-step" key={step}>
             {step === 0 && (

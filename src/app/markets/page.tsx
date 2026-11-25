@@ -10,6 +10,7 @@ export default function Markets() {
   return (
     <PageShell>
       <PageIntro
+        path="/markets"
         name="Markets"
         eyebrow="CLEAR PLANS. RELEVANT AUDIENCES."
         title="Your market."

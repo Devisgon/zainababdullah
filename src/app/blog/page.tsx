@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft, FileText, Search } from "lucide-react";
 import { PageShell, PageIntro, PageCTA } from "@/components/layout/page-shell";
 import { BlogCard } from "@/features/blog/components/blog-card";
@@ -32,23 +33,25 @@ function pagePath(query: string, category: string, page: number) {
 export async function generateMetadata({ searchParams }: Props) {
   const o = options(await searchParams);
   const data = await listBlogPosts(o);
+  const topic = o.query ? "Article search" : o.category || "Paid Ads, Content & Business Clarity";
+  const pageLabel = o.page > 1 ? ` — Page ${o.page}` : "";
   return pageMetadata(
-    o.page > 1
-      ? `Blog — Page ${o.page}`
-      : "Blog — Paid Ads, Content & Business Clarity",
-    "Practical perspectives on Meta Ads, TikTok Ads, Google Ads, content marketing and business analysis from Zainab Abdullah.",
+    `Blog — ${topic}${pageLabel}`,
+    `Browse ${o.category || "paid advertising, content marketing and business analysis"} articles by Zainab Abdullah${o.page > 1 ? `, page ${o.page}` : ""}.`,
     pagePath(o.query, o.category, o.page),
-    data.total > 0 && !o.query,
+    data.posts.length > 0 && !o.query,
   );
 }
 export default async function Blog({ searchParams }: Props) {
   const o = options(await searchParams);
   const { posts, total } = await listBlogPosts(o);
   const totalPages = Math.max(1, Math.ceil(total / 9));
+  if (o.page > totalPages) notFound();
   return (
     <PageShell>
       <PageIntro
-        name="Blog"
+        path={pagePath(o.query, o.category, o.page)}
+        name={o.page > 1 ? `Blog · Page ${o.page}` : o.category || "Blog"}
         eyebrow="IDEAS WORTH THINKING ABOUT"
         title="A fresh perspective."
         accent="A clearer next move."
@@ -100,7 +103,9 @@ export default async function Blog({ searchParams }: Props) {
                   <span />
                 )}
                 <span>
-                  Page {o.page} of {totalPages}
+                  Page {o.page} of {o.page < totalPages ? (
+                    <a href={pagePath(o.query, o.category, totalPages)} aria-label={`Last page, page ${totalPages}`}>{totalPages}</a>
+                  ) : totalPages}
                 </span>
                 {o.page < totalPages ? (
                   <a href={pagePath(o.query, o.category, o.page + 1)}>

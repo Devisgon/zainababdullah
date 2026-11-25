@@ -1,3 +1,4 @@
+import { SectionBreadcrumb } from "@/components/seo/section-breadcrumb";
 import { Header, Footer } from "@/components/layout/site-chrome";
 import { LINKEDIN_URL } from "@/lib/content/site";
 import { pageMetadata } from "@/lib/seo/metadata";
@@ -15,11 +16,7 @@ export default function Privacy() {
       </a>
       <Header />
       <main className="container prose-page" id="main">
-        <nav className="breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span>/</span>
-          <span>Privacy</span>
-        </nav>
+        <SectionBreadcrumb name="Privacy" path="/privacy" />
         <span className="eyebrow">
           LAST UPDATED: 30 OCTOBER 2026 · VERSION 4
         </span>

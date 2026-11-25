@@ -1,3 +1,4 @@
+import { SectionBreadcrumb } from "@/components/seo/section-breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Brain, Workflow, Globe, ArrowUpRight, Check } from "lucide-react";
 import { PageShell, PageCTA } from "@/components/layout/page-shell";
@@ -34,11 +35,7 @@ export default function About() {
       <JsonLd data={schema} />
       <section className="container about-hero">
         <div>
-          <nav className="breadcrumbs" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <span>/</span>
-            <span>About</span>
-          </nav>
+          <SectionBreadcrumb name="About" path="/about" />
           <span className="eyebrow">A HUMAN PERSPECTIVE. A BUSINESS MIND.</span>
           <h1 className="about-career-headline">
             <span className="about-title-role">{content.role}</span>

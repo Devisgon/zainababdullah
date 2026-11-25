@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: { icon: "/zainab-abdullah-favicon.webp", shortcut: "/zainab-abdullah-favicon.webp" },
 };
 export default function RootLayout({
   children,

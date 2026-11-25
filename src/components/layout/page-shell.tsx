@@ -1,3 +1,4 @@
+import { SectionBreadcrumb } from "@/components/seo/section-breadcrumb";
 import type { ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Header, Footer } from "./site-chrome";
@@ -19,20 +20,18 @@ export function PageIntro({
   accent,
   description,
   name,
+  path,
 }: {
   eyebrow: string;
   title: string;
   accent: string;
   description: string;
   name: string;
+  path: string;
 }) {
   return (
     <section className="container page-intro">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span>/</span>
-        <span aria-current="page">{name}</span>
-      </nav>
+      <SectionBreadcrumb name={name} path={path} />
       <span className="eyebrow">{eyebrow}</span>
       <h1>
         {title}

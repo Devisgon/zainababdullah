@@ -1212,7 +1212,7 @@ textarea:focus-visible {
 .form-progress > span.filled {
   background: #60718a;
 }
-.lead-form-card h3 {
+.lead-form-card :is(h2, h3) {
   font-size: 27px;
   line-height: 1.15;
   letter-spacing: -0.8px;
@@ -1488,7 +1488,7 @@ textarea:focus-visible {
   place-items: center;
   color: #60718a;
 }
-.form-success h3 {
+.form-success :is(h2, h3) {
   font-size: 32px;
   margin: 0;
 }
@@ -2335,7 +2335,7 @@ textarea:focus-visible {
   .lead-form-card {
     padding: 24px 23px;
   }
-  .lead-form-card h3 {
+  .lead-form-card :is(h2, h3) {
     font-size: 24px;
   }
   .choice {
@@ -2841,7 +2841,7 @@ textarea:focus-visible {
     min-height: 475px;
     box-shadow: 4px 5px 0 #0b1d3a;
   }
-  .lead-form-card h3 {
+  .lead-form-card :is(h2, h3) {
     font-size: 25px;
     letter-spacing: -0.7px;
   }
@@ -2908,7 +2908,7 @@ textarea:focus-visible {
   .goal-grid .choice {
     min-height: 47px;
   }
-  .form-success h3 {
+  .form-success :is(h2, h3) {
     font-size: 27px;
   }
   .form-success > p {
@@ -3171,7 +3171,7 @@ textarea:focus-visible {
     max-width: 108px;
     font-size: 6px;
   }
-  .lead-form-card h3 {
+  .lead-form-card :is(h2, h3) {
     font-size: 23px;
   }
   .closing-strip h2 {
