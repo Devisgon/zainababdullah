@@ -111,6 +111,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/performance-max-existing-demand-roas-incrementality",
         permanent: true,
       },
+      {
+        source: "/meta-capi-deduplication-purchase-events",
+        destination: "/blog/meta-capi-deduplication-purchase-events",
+        permanent: true,
+      },
     ];
   },
   async headers() {

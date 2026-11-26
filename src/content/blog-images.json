@@ -443,5 +443,80 @@
     "width": 1200,
     "height": 800,
     "srcSet": "/assets/blog/performance-max-sales-control-640.webp 640w, /assets/blog/performance-max-sales-control.webp 1200w"
+  },
+  "/assets/blog/checkout-carts-no-sales.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/checkout-carts-no-sales-640.webp 640w, /assets/blog/checkout-carts-no-sales.webp 1200w"
+  },
+  "/assets/blog/checkout-shipping-total.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/checkout-shipping-total-640.webp 640w, /assets/blog/checkout-shipping-total.webp 1200w"
+  },
+  "/assets/blog/checkout-mobile-payment-test.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/checkout-mobile-payment-test-640.webp 640w, /assets/blog/checkout-mobile-payment-test.webp 1200w"
+  },
+  "/assets/blog/sales-objections-content-calendar.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/sales-objections-content-calendar-640.webp 640w, /assets/blog/sales-objections-content-calendar.webp 1200w"
+  },
+  "/assets/blog/sales-objection-listening.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/sales-objection-listening-640.webp 640w, /assets/blog/sales-objection-listening.webp 1200w"
+  },
+  "/assets/blog/sales-objection-repurpose.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/sales-objection-repurpose-640.webp 640w, /assets/blog/sales-objection-repurpose.webp 1200w"
+  },
+  "/assets/blog/meta-shopify-revenue-gap.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/meta-shopify-revenue-gap-640.webp 640w, /assets/blog/meta-shopify-revenue-gap.webp 1200w"
+  },
+  "/assets/blog/revenue-order-reporting-dates.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/revenue-order-reporting-dates-640.webp 640w, /assets/blog/revenue-order-reporting-dates.webp 1200w"
+  },
+  "/assets/blog/shopify-refunds-reconciliation.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/shopify-refunds-reconciliation-640.webp 640w, /assets/blog/shopify-refunds-reconciliation.webp 1200w"
+  },
+  "/assets/blog/meta-roas-tracking-migration.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/meta-roas-tracking-migration-640.webp 640w, /assets/blog/meta-roas-tracking-migration.webp 1200w"
+  },
+  "/assets/blog/roas-store-order-check.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/roas-store-order-check-640.webp 640w, /assets/blog/roas-store-order-check.webp 1200w"
+  },
+  "/assets/blog/tracking-migration-timeline.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/tracking-migration-timeline-640.webp 640w, /assets/blog/tracking-migration-timeline.webp 1200w"
+  },
+  "/assets/blog/meta-capi-purchase-deduplication.webp": {
+    "width": 1200,
+    "height": 630,
+    "srcSet": "/assets/blog/meta-capi-purchase-deduplication-640.webp 640w, /assets/blog/meta-capi-purchase-deduplication.webp 1200w"
+  },
+  "/assets/blog/pixel-capi-match-event-ids.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/pixel-capi-match-event-ids-640.webp 640w, /assets/blog/pixel-capi-match-event-ids.webp 1200w"
+  },
+  "/assets/blog/capi-test-one-purchase.webp": {
+    "width": 1200,
+    "height": 800,
+    "srcSet": "/assets/blog/capi-test-one-purchase-640.webp 640w, /assets/blog/capi-test-one-purchase.webp 1200w"
   }
 }
